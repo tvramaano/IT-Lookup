@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+	   <link rel='icon' type='image/png' href='images/codex_icon.png'/>
+	   <title>CodeX</title>
+	  
+	  <meta charset="utf-8"/>
+	  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	  
+	<link rel="stylesheet" href="stylesheet/styleIndex.css"/>
+	<link rel="stylesheet" href="stylesheet/styleComponents.css"/>
+    <script src="javascript/jscriptIndex.js" type="text/javascript"></script>
+	<script src="javascript/jscriptComponents.js" type="text/javascript"></script>
+	<script src="javascript/jscriptDefinitions.js" type="text/javascript"></script>
+	<script src="javascript/jscriptTutorialsAndTemplates.js" type="text/javascript"></script>
+  
+</head>
+
+<body id = "body">
+
+	
+	
+	<!-- Navigation options -->
+	<nav class = "left_navigation" id = "programming_concepts_navigation_id">
+			
+			
+			<section class = "left_navigation_header"><h1>Programming Concepts</h1><span onclick = "pop_up_modal('close_status_id','programming_concepts_navigation_id','')">X</span></section>
+			
+			<div class = "left_navigation_tab">
+				<form autocomplete="off">
+				
+					<input id="programming_concept_input" type="text" placeholder = "search programming tools..."/>
+				</form>
+
+				<section class = "left_navigation_tab_button_group">
+					<button onclick = "populate_programming_concepts(search_flags.search_specific,document.getElementById(PROGRAMMING_CONCEPT_INPUT_ID).value);" class = "full_length_width">Search</button>
+				
+					<select onclick = "populate_programming_concepts(search_flags.search_all,document.getElementById('sort_criteria_dropdown_id').value);" id = "view_criteria">
+						
+					</select>
+					
+						<select id = "sort_criteria_dropdown_id" onclick = "sort_by_selection('sort_criteria_dropdown_id',programming_concepts, search_flags.search_all)">
+						<option>Sort by: default</option>
+						<option>Sort by: name</option>
+					</select>
+				</section> 
+			</div>
+		
+			<section id = "programming_content_id"></section>
+	</nav>
+	
+	<!-- Navigation options -->
+	<nav class = "left_navigation" id = "about_us_id">
+			
+			
+			<section class = "left_navigation_header"><h1>About</h1><span onclick = "pop_up_modal('close_status_id','about_us_id','')">X</span></section>
+			<section class = "left_navigation_content">
+				<p><u>What is CodeX</u></p>
+				
+				<p>Being able to create something using code is one of the best experiences one will ever have no matter how basic the program. At CodeX, we aim to provide you with all the fundamental tools to get you started on your programming journey. We have programming definitions from different categories and programming careers and tutorials for you to browse. </p>
+				
+				<p>This platform is open to all aspiring programmers. Whether you are a person with no programming experience or an experienced programmer who wants to brush up on the fundamentals of programming, this platform is for you. We encourage that you use this opportunity to to build a solid foundation for your programming career. </p>
+				
+				<p><u>Meet the Team</u></p>
+				
+				<p class = "team_section">
+					<img src = "images/profile_img.png" /></br>
+					Team member name 1</br>
+					"Special quote"
+				</p>
+				
+				<p class = "team_section">
+					<img src = "images/profile_img.png" /></br>
+					Team member name 2</br>
+					"Special quote"
+				</p>
+				
+				<p class = "team_section">
+					<img src = "images/profile_img.png" /></br>
+					Team member name 3</br>
+					"Special quote"
+				</p>
+				
+				<p class = "team_section">
+					<img src = "images/profile_img.png" /></br>
+					Team member name 4</br>
+					"Special quote"
+				</p>
+				
+				<p class = "team_section">
+					<img src = "images/profile_img.png" /></br>
+					Team member name 5</br>
+					"Special quote"
+				</p>
+			</section>
+			
+	</nav>
+	
+	<!-- Tutorials -->
+	<nav class = "left_navigation" id = "tutorials_id">
+			
+			
+			<section class = "left_navigation_header"><h1>Tutorials</h1><span onclick = "pop_up_modal('close_status_id','tutorials_id','')">X</span></section>
+			<section class = "left_navigation_content">
+				<div class = "left_navigation_tab">
+					[No tutorials available]
+				</div>
+			</section>
+			
+	</nav>
+	
+	
+	
+	 <section id = "display_definition_modal_id">
+		<section class = "display_definition_modal_empty"></section>
+		<section class = "display_definition_modal_section" id = "display_definition_modal_nav_id">
+			<section class = "display_definition_modal_section_header">
+				<section class = "display_definition_modal_section_header_inner">
+					<h2>Code X definition vault</h2>
+					<span onclick = "display_modal('close_status_id')">Close</span>
+				</section>
+			</section>
+		</section>
+		<section class = "display_definition_modal_section" id = "display_definition_modal_header_id"><h1>Concept name</h1></section>
+		<section class = "display_definition_modal_section" id = "display_definition_modal_date_id">[date updated]</section>
+		<section class = "display_definition_modal_section" id = "display_definition_modal_category_id"><h2>[Category]</h2></section>
+		<section class = "display_definition_modal_section" id = "display_definition_modal_definition_id">Definition of concept</section>
+		<section class = "display_definition_modal_section" id = "display_definition_modal_related_id"><h2>Related concepts</h2></section>
+	
+	</section> 
+	
+	<section class = "cart_information_modal_class" id = "definition_modal_id">
+		
+	</section>
+	
+	<section class = "subscription_box_container" id = "subscription_box_container_id" >
+				<h2>Get notified when we release new content</h2>
+				<input placeholder = "Enter email address"/>
+				<button>Subscribe</button>
+				<button onclick = "pop_up_modal('close_status_id','subscription_box_container_id','')">Close</button>
+	</section>
+	
+	<!-- welcome message -->
+	  <section id="loader_screen">
+		   
+				<section class = "display_definition_modal_empty"></section>
+				<section class = "display_definition_modal_section" id = "display_definition_modal_nav_id">
+					<section class = "display_definition_modal_section_header">
+						<section class = "display_definition_modal_section_header_inner">
+							<span> < CodeX / > </span>
+							<h4><i>solidify the fundamentals in order to master the craft</i></h4>
+						</section>
+					</section>
+				</section>
+				
+			
+				
+				<section class = "display_flex_center">
+					<section class = "count_sections_container">
+						
+					
+							<section class = "web_items">
+								<section class = "web_items_value" id = "concepts_count">0</section>
+								<section class = "web_items_name">Number of concepts</section>
+							</section>
+							
+							<section class = "web_items">
+							<section class = "web_items_value" id = "categories_count">0</section>
+							<section class = "web_items_name">Number of categories</section>
+							</section>
+							
+							<section class = "web_items">
+								<section class = "web_items_value" id = "templates_count">0</section>
+								<section class = "web_items_name">Number of templates</section>
+							</section>
+							
+						
+					</section>
+					
+				
+					
+					
+				</section>
+				
+					<section class = "display_flex_center">
+					<section class = "count_sections_container">
+						
+							<section onclick = "pop_up_modal('open_status_id','programming_concepts_navigation_id','programming_concepts_active_id')" class = "web_items cursorPointer tab_fixed_height">
+								<section class = "web_items_value" id = "programming_concepts_active_id">X</section>
+								<section class = "web_items_name">Programming Concepts</section>
+							</section>
+							
+							<section onclick = "pop_up_modal('open_status_id','tutorials_id','tutorials_and_templates_active_id')" class = "web_items cursorPointer tab_fixed_height">
+								<section class = "web_items_value" id = "tutorials_and_templates_active_id">X</section>
+								<section class = "web_items_name">Tutorials and Templates</section>
+							</section>
+							
+							<section onclick = "pop_up_modal('open_status_id','about_us_id','about_active_id')" class = "web_items cursorPointer tab_fixed_height">
+								<section class = "web_items_value" id = "about_active_id">X</section>
+								<section class = "web_items_name">Code Compare</section>
+							</section>
+							
+						
+					</section>
+					
+					
+					
+					
+				</section>
+				
+				<section class = "display_definition_modal_empty"></section>
+				<section class = "display_definition_modal_section" id = "display_faqs">
+					<section class = "display_definition_modal_section_header">
+						<section class = "display_definition_modal_section_header_inner">
+							<span> FAQ</span>s
+							<h4><i>Questions you might want answers to. </i></h4>
+						</section>
+					</section>
+				</section>
+				
+				<section class = "faqs_container">
+					<section class = "faqs_container_sections"><span>?</span> I am a beginner and want to learn programming. Which language should I start learning first?</section>
+					<section class = "faqs_container_sections grey_color "><span>&#10003;</span></section>
+					
+					<section class = "faqs_container_sections"><span>?</span>I am a beginner and want to learn programming. Which language should I start learning first?</section>
+					<section class = "faqs_container_sections grey_color "><span>&#10003;</span></section>
+					
+					
+				
+				</section>
+				
+				<footer class = "footer">
+					<section class = "footer_section">
+						<h2>codex</h2>
+						<h3>Quick links</h3>
+						
+						<hr>
+						<section onclick = "pop_up_modal('open_status_id','programming_concepts_navigation_id','programming_concepts_active_id')" class = "footer_section_tab">Programming Concepts</section>
+						<section onclick = "pop_up_modal('open_status_id','tutorials_id','tutorials_and_templates_active_id')" class = "footer_section_tab">Tutorials and Templates</section>
+						<section onclick = "pop_up_modal('open_status_id','about_us_id','about_active_id')" class = "footer_section_tab">Code Compare</section>	
+						<section onclick = "pop_up_modal('open_status_id','about_us_id','about_active_id')" class = "footer_section_tab">About</section>	
+						<section onclick = "pop_up_modal('open_status_id','about_us_id','about_active_id')" class = "footer_section_tab">Terms and Conditions</section>
+						<section onclick = "pop_up_modal('open_status_id','about_us_id','about_active_id')" class = "footer_section_tab">Privacy policy</section>
+						
+					</section>
+					
+					<h3><i>solidify the foundation in order to master the craft</i></h3>
+					
+				</footer>	
+				
+			
+			
+	  </section>
+	  
+	 
+</body>
+
+<script>
+	let search_flag = search_flags.search_all;
+	let sort_criteria = document.getElementById(PROGRAMMING_CONCEPT_INPUT_ID).value;
+	startup(search_flag,sort_criteria);
+</script>
+
+</html>
