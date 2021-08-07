@@ -1,0 +1,1 @@
+setupPage(page_index.frequently_asked_questions);

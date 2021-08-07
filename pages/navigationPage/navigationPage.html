@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+	   <link id = "web_icon_id" rel='icon' type='image/png' href=''/>
+	   <title id = "page_title_id"></title>
+	  
+	  <meta charset="utf-8"/>
+	  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	  
+      <link rel="stylesheet" href="../../index.css"/>
+      <link rel="stylesheet" href="../../components/footer/footer.css"/>
+      <link rel="stylesheet" href="../../components/header/header.css"/>
+      <link rel="stylesheet" href="../../components/loader/loader.css"/>
+      <link rel="stylesheet" href="navigationPage.css"/>
+  
+      <script src="../../images/imageSources.js" type="text/javascript"></script>
+      <script src="../../index.js" type="text/javascript"></script>
+      <script src="navigationPage.js" type="text/javascript"></script>
+      <script src = "../../components/footer/footer.js"></script>
+      <script src = "../../components/header/header.js"></script>
+      <script src = "../../components/loader/loader.js"></script>
+      
+	
+  
+</head>
+
+<body>
+<div id = "loading_id">
+    <script>
+        showLoading("loading_id");
+        showLoadingTime("loading_id");
+     </script>
+</div>
+<!--header-->
+<div id = "header_id">
+	<script>setupHeader(
+						"header_id",
+						"Company name and logo",
+						"What would you like to do?",
+                        "../../"
+						)
+	</script>
+</div>
+
+<div class = "content_area">
+    <div class = "navigation_area">
+        <div onclick = "goToPage(page_index.programming_concepts,'../../')"  class = "navigation_tab">
+            Browse programming concepts
+        </div>
+        
+        <div onclick = "goToPage(page_index.code_compare,'../../')" class = "navigation_tab">
+            Compare code concepts
+        </div>
+
+        <div onclick = "goToPage(page_index.browse_information_technology_jobs,'../../')" class = "navigation_tab">
+            Browse Information Technology careers
+        </div>
+
+        <div onclick = "goToPage(page_index.frequently_asked_questions,'../../')" class = "navigation_tab">
+            Frequently asked questions
+        </div>
+        
+        <div onclick = "goToPage(page_index.prepare_my_career,'../../')" class = "navigation_tab">
+            Prepare myself for a career as a software developer
+        </div>
+       
+       
+    </div>
+</div>
+	
+<!--footer-->
+<div id = "footer_id">
+	<script>setupFooter("footer_id","../")</script>
+</div>	
+	
+	
+</body>
+
+
+</html>
