@@ -3,12 +3,13 @@ const page_index = {
                     terms_and_conditions: 1, 
                     privacy_policy: 2, 
                     about: 3,
-                    navigation: 4,
-                    programming_concepts: 5, 
-                    code_compare: 6, 
-                    frequently_asked_questions: 7, 
-                    prepare_my_career: 8,
-                    browse_information_technology_jobs: 9};
+                    programming_concepts: 4, 
+                    code_compare: 5, 
+                    frequently_asked_questions: 6, 
+                    prepare_my_career: 7,
+                    browse_information_technology_jobs: 8,
+                    IT_study_choices: 9
+                };
 
 const page_setup_parameters = [
     {
@@ -43,13 +44,6 @@ const page_setup_parameters = [
         icon_id: "web_icon_id",
         icon_source: "../../"+image_sources.website_icon,
         page_id: "page_title_id",
-        page_name: "Code Resources",
-        page_url: "pages/navigationPage/navigationPage.html"
-    },
-    {
-        icon_id: "web_icon_id",
-        icon_source: "../../"+image_sources.website_icon,
-        page_id: "page_title_id",
         page_name: "Programming Concepts",
         page_url: "pages/programmingConcepts/programmingConcepts.html"
     },
@@ -57,7 +51,7 @@ const page_setup_parameters = [
         icon_id: "web_icon_id",
         icon_source: "../../"+image_sources.website_icon,
         page_id: "page_title_id",
-        page_name: "Code Compare",
+        page_name: "Code Comparison",
         page_url: "pages/codeCompare/codeCompare.html"
     },
     {
@@ -80,7 +74,15 @@ const page_setup_parameters = [
         page_id: "page_title_id",
         page_name: "Browse Information Technology careers",
         page_url: "pages/browseInformationTechnologyJobs/browseInformationTechnologyJobs.html"
+    },
+    {
+        icon_id: "web_icon_id",
+        icon_source: "../../"+image_sources.website_icon,
+        page_id: "page_title_id",
+        page_name: "Information Technology related study options",
+        page_url: "pages/browseInformationTechnologyJobs/browseInformationTechnologyJobs.html"
     }
+
 
 ]
 
@@ -103,3 +105,10 @@ setupPage(page_index.index);
 function goToPage(page_index,dir){
     window.location.href = dir + "" + page_setup_parameters[page_index].page_url;
 }
+
+
+// go to page
+function getPageName(page_index,page_id){
+   document.getElementById(page_id).innerHTML = page_setup_parameters[page_index].page_name;
+}
+

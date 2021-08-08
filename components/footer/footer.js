@@ -12,6 +12,7 @@ function setupFooter(footer_id){
                                                             "<div class = 'footer_container_tabs_link'><a href = '"+dir+page_setup_parameters[page_index.code_compare].page_url+"'>"+page_setup_parameters[page_index.code_compare].page_name+"</a></div>"+
                                                             "<div class = 'footer_container_tabs_link'><a href = '"+dir+page_setup_parameters[page_index.frequently_asked_questions].page_url+"'>"+page_setup_parameters[page_index.frequently_asked_questions].page_name+"</a></div>"+
                                                             "<div class = 'footer_container_tabs_link'><a href = '"+dir+page_setup_parameters[page_index.prepare_my_career].page_url+"'>"+page_setup_parameters[page_index.prepare_my_career].page_name+"</a></div>"+
+                                                            "<div class = 'footer_container_tabs_link'><a href = '"+dir+page_setup_parameters[page_index.IT_study_choices].page_url+"'>"+page_setup_parameters[page_index.IT_study_choices].page_name+"</a></div>"+
                                                             
                                                          "</div>"+
                                                          "<div class = 'footer_section'>"+
@@ -29,7 +30,7 @@ function setupFooter(footer_id){
                                                             "</div>"+
                                                          "</div>"+
                                                       "</div>"+
-                                                      "<div class = 'footer_container_company_name'><img src = '"+getImageDir(dir)+image_sources.website_icon+"'</div>"+
+                                                      "<div class = 'footer_container_company_name'><img src = '"+getImageDir(dir)+image_sources.website_logo+"'</div>"+
                                                       "<div class = 'footer_container_company_name'>companyname@domain.com</div>"+
                                                       "<div class = 'footer_container_company_name'>&copy; 2021 Company Name</div>"+
                                                    "</div>";

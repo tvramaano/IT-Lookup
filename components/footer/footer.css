@@ -11,6 +11,11 @@
     padding: 1%;
 }
 
+.footer_container_company_name img{
+    width: 400px;
+    height: 250px;
+}
+
 
 .footer_container_tabs h3{
     color: var(--dark_blue);
@@ -24,7 +29,7 @@
     background-color: var(--light_color);
     color: var(--dark_blue);
     border-radius: 10px;
-    height: 200px;
+    height: 230px;
     float: left;
     padding: 2%;
 }
@@ -85,7 +90,7 @@
 }
 
 .subscription_box button:hover{
-    color: var(--dark_grey);
+    color: var(--light_color);
     background-color: var(--dark_blue);
     cursor: pointer;
 }
@@ -108,6 +113,12 @@
     .subscription_box input,.subscription_box button{
         font-size: 15px;
     }
+
+    .footer_section{
+        height: 250px;
+    }
+
+    
 
 }
 
@@ -134,5 +145,17 @@
 
     .subscription_box input,.subscription_box button{
         font-size: 15px;
+    }
+
+    .footer_container_company_name img{
+        width: 250px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .footer_container_company_name img{
+        width: 120px;
+        height: 90px;
     }
 }

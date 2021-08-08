@@ -45,19 +45,16 @@ body{
   float: left;
 }
 
-.index_body{
-  background-image: url(images/home_page.png);
-}
 
 .home_page_container{
   width: 90%;
   float: left;
+  margin: 2%;
   margin-left: 5%;
   margin-right: 5%;
   border-radius: 10px;
-  background-color: rgba(0,0,200,0.4);
+  background-image: url(images/website_component_bakground.png);
   top: 1%;
-  position: absolute;
 }
 
 .home_page_tabs_container{
@@ -78,7 +75,7 @@ body{
   border-radius: 10px;
   text-align: center;
   font-weight: 600;
-  background-color: var(--light_grey);
+  background-color: var(--light_grey); 
   color: var(--dark_blue);
 }
 
@@ -100,10 +97,16 @@ body{
   font-size: 30px;
   float: left;
   text-align: center;
+  color: var(--light_color);
 }
 
 .home_page_heading h1{
   margin-bottom: 0;
+}
+
+.home_page_heading img{
+  width: 500px;
+  height: 350px;
 }
 
 .home_page_subheading{
@@ -114,6 +117,7 @@ body{
   font-size:  25px;
   text-align: center;
   font-weight: 600;
+  color: var(--light_color);
 }
 
 .horizontal_line{
@@ -123,6 +127,32 @@ body{
   margin-right: 45%;
   background-color: var(--light_color);
   float: left;
+}
+
+.home_page_count{
+  width: 96%;
+  padding: 2%;
+  float: left;
+  font-weight: 600;
+  color: var(--light_color);
+}
+
+.home_page_count_container{
+  float: left;
+  width: 20%;
+}
+
+.home_page_count_container_section_value{
+  width: 100%;
+  float: left;
+  text-align: left;
+  font-size: 20px;
+}
+
+.home_page_count_container_section{
+  width: 100%;
+  float: left;
+  font-size: 15px;
 }
 
 
@@ -151,6 +181,25 @@ body{
     margin-right: 5%;
     float: left;
   }
+
+  .home_page_count_container{
+    float: left;
+    width: 48%;
+    margin-bottom: 2%;
+  }
+
+  .home_page_count_container_section_value{
+    font-size: 20px;
+  }
+  
+  .home_page_count_container_section{
+    font-size: 15px;
+  }
+
+  .home_page_heading img{
+    width: 400px;
+    height: 250px;
+  }
 }
 
 @media screen and (max-width: 770px) {
@@ -170,9 +219,31 @@ body{
     margin-left: 5%;
     margin-right: 5%;
   }
+
   .home_page_tab{
    width: 43%;
    font-size: 13px;
   }
 
+  .home_page_count_container{
+    width: 98%;
+  }
+
+  .home_page_count_container_section,.home_page_count_container_section_value{
+    text-align: center;
+  }
+
+  .home_page_heading img{
+    width: 300px;
+    height: 200px;
+  }
+
+
+}
+
+@media screen and (max-width: 320px) {
+  .home_page_heading img{
+    width: 200px;
+    height: 150px;
+  }
 }

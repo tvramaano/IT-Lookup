@@ -13,26 +13,22 @@
       <link rel="stylesheet" href="../../index.css"/>
       <link rel="stylesheet" href="../../components/footer/footer.css"/>
       <link rel="stylesheet" href="../../components/header/header.css"/>
+	  <link rel="stylesheet" href="../../components/navigation/navigation.css"/>
       <link rel="stylesheet" href="frequentlyAskedQuestions.css"/>
-	  <link rel="stylesheet" href="../../components/loader/loader.css"/>
+	  
       
       <script src="../../images/imageSources.js" type="text/javascript"></script>
       <script src="../../index.js" type="text/javascript"></script>
       <script src="frequentlyAskedQuestions.js" type="text/javascript"></script>
       <script src = "../../components/footer/footer.js"></script>
       <script src = "../../components/header/header.js"></script>
-	  <script src = "../../components/loader/loader.js"></script>
+	  <script src = "../../components/navigation/navigation.js"></script>
 	
   
 </head>
 
 <body>
-<div id = "loading_id">
-    <script>
-        showLoading("loading_id");
-        showLoadingTime("loading_id");
-     </script>
-</div>
+
 <!--header-->
 <div id = "header_id">
 	<script>setupHeader(
@@ -40,6 +36,12 @@
 						"Frequently asked questions",
 						"../../"
 						)
+	</script>
+</div>
+
+<div id = "navigation_id">
+	<script>
+		openNavigation("navigation_id")
 	</script>
 </div>
 
