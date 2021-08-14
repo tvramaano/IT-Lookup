@@ -20,6 +20,7 @@
 	<script src ="components/footer/footer.js" type ="text/javascript"></script>
 	<script src ="components/modal/modal.js" type ="text/javascript"></script>
 	<script src ="components/header/header.js" type ="text/javascript"></script>
+	<script src ="pages/programmingConcepts/programming_definitions.js" type ="text/javascript"></script>
 	
   
 </head>
@@ -49,7 +50,7 @@
 			
 		   <div onclick="goToPage(page_index.prepare_my_career,'')" class = "home_page_tab"><img src= "images/career_prepare_icon.png"/><p id = "career_prepare_id"><script>getPageName(page_index.prepare_my_career,"career_prepare_id");</script></p></div>
 		   <div onclick="goToPage(page_index.frequently_asked_questions,'')" class = "home_page_tab"><img src= "images/faq_icon.png"/><p id = "faq_id"><script>getPageName(page_index.frequently_asked_questions,"faq_id");</script></p></div>
-		   <div onclick="goToPage(page_index.about,'')" class = "home_page_tab"><img src= "images/IT_study_choices_icon.png"/><p id = "IT_study_choices_id"><script>getPageName(page_index.IT_study_choices,"IT_study_choices_id");</script></p></div>  
+		   <div onclick="goToPage(page_index.IT_study_choices,'')" class = "home_page_tab"><img src= "images/IT_study_choices_icon.png"/><p id = "IT_study_choices_id"><script>getPageName(page_index.IT_study_choices,"IT_study_choices_id");</script></p></div>  
 		  
 		   <div onclick="goToPage(page_index.about,'')" class = "home_page_tab"><img src= "images/about_icon.png"/><p id = "about_id"><script>getPageName(page_index.about,"about_id");</script></p></div>
 		   <div onclick="goToPage(page_index.prepare_my_career,'')" class = "home_page_tab"><img src= "images/terms_and_conditions_icon.png"/><p id = "terms_and_conditions_id"><script>getPageName(page_index.terms_and_conditions,"terms_and_conditions_id");</script></p></div>
@@ -60,7 +61,7 @@
 	   
 	   <div class = "home_page_count">
 			<div class = "home_page_count_container">
-				<div class = "home_page_count_container_section_value"><code>0</code></div>
+				<div class = "home_page_count_container_section_value"><code id = "count_programming_concepts">0</code></div>
 				<div class = "home_page_count_container_section"><code>Programming concepts</code></div>
 			</div>
 			<div class = "home_page_count_container">
@@ -91,5 +92,8 @@
 	
 </body>
 
+<script>
+	startup_index();
+</script>
 
 </html>

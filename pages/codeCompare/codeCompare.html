@@ -40,7 +40,10 @@
 
 <div id = "navigation_id">
 	<script>
-		openNavigation("navigation_id")
+		openNavigation(
+			"navigation_id",
+			page_setup_parameters[page_index.code_compare].tab_id
+		)
 	</script>
 </div>
 
@@ -50,7 +53,11 @@
 	
 <!--footer-->
 <div id = "footer_id">
-	<script>setupFooter("footer_id","../")</script>
+	<script>setupFooter(
+			"footer_id",
+			page_setup_parameters[page_index.code_compare].tab_id
+		)
+	</script>
 </div>	
 	
 	

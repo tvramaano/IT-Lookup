@@ -37,7 +37,10 @@
 
 <div id = "navigation_id">
 	<script>
-		openNavigation("navigation_id")
+		openNavigation(
+			"navigation_id",
+			page_setup_parameters[page_index.privacy_policy].tab_id
+		)
 	</script>
 </div>
 
@@ -46,7 +49,12 @@
 </div>	
 <!--footer-->
 <div id = "footer_id">
-	<script>setupFooter("footer_id","../")</script>
+	<script>
+		setupFooter(
+			"footer_id",
+			page_setup_parameters[page_index.privacy_policy].tab_id
+		)
+	</script>
 </div>		
 	
 </body>

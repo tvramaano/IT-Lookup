@@ -1,0 +1,31 @@
+.team_container{
+    width: 94%;
+    float: left;
+    margin: 2%;
+    padding: 1%;
+    text-align: center;
+}
+
+.team_container img{
+    width: 150px;
+    height: 100px;
+    padding: 2%;
+    border-radius: 100px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    border: 3px solid var(--dark_blue);
+    background-image: url(../../images/website_component_bakground.png);
+}
+
+.team_container span{
+    width: 100%;
+    float: left;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.team_container h3{
+    width: 100%;
+    float: left;
+    color: var(--dark_blue);
+}

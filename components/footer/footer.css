@@ -29,9 +29,13 @@
     background-color: var(--light_color);
     color: var(--dark_blue);
     border-radius: 10px;
-    height: 230px;
+    height: 290px;
     float: left;
     padding: 2%;
+}
+
+.footer_section h3{
+    color: var(--dark_grey_accent);
 }
 
 .footer_container_tabs_link{
@@ -59,6 +63,13 @@
     float: left;
     color: var(--dark_blue);
     padding: 4%;
+}
+
+.subscription_box p{
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 10px;
+    float: left;
 }
 
 .subscription_box h3,.subscription_box input,.subscription_box button{
@@ -115,7 +126,7 @@
     }
 
     .footer_section{
-        height: 250px;
+        height: 300px;
     }
 
     

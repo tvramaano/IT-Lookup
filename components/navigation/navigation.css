@@ -2,7 +2,7 @@
     width: 30%;
     left: 0;
     top: 0;
-    z-index: 1;
+    z-index: 30;
     position: fixed;
     float: left;
     height: 100vh;
@@ -64,6 +64,13 @@
     background-image: url(../../images/website_component_bakground.png);
     color: var(--light_color);
     cursor: pointer;
+}
+
+@media screen and (max-width: 1025px) {
+    .navigation_container{
+        width: 50%;
+    }
+
 }
 
 @media screen and (max-width: 769px) {
