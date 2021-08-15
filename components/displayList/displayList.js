@@ -33,7 +33,7 @@ function display_modal(open_status,header_info,date_info,category_info,definitio
 	}
 }
 
-function definitionVault(page_id){
+function definitionVault(page_id,display_header_label){
     document.getElementById(page_id).innerHTML = "<section id = 'display_definition_modal_id'>"+
                                                         "<section class = 'top_fixed'>"+
                                                         
@@ -41,7 +41,7 @@ function definitionVault(page_id){
                                                             "<section class = 'display_definition_modal_section' id = 'display_definition_modal_nav_id'>"+
                                                                 "<section class = 'display_definition_modal_section_header'>"+
                                                                     "<section class = 'display_definition_modal_section_header_inner'>"+
-                                                                        "<h2>Definition vault</h2>"+
+                                                                        "<h2>"+display_header_label+"</h2>"+
                                                                         "<span onclick = 'display_modal(\"close_status_id\")'>Close</span>"+
                                                                     "</section>"+
                                                                 "</section>"+
@@ -72,7 +72,7 @@ function get_list_of_concepts(search_concept_box, list_of_options,popValues,popO
           return false;
         }
         
-        // dynamically create di element
+        // dynamically create the element
         dynamic_div_element_1 = document.createElement(html_elements.div_element);
         dynamic_div_element_1.setAttribute(html_elements.id_element, this.id + popValues);
         dynamic_div_element_1.setAttribute(html_elements.class_element, popOptions);

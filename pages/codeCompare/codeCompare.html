@@ -47,9 +47,28 @@
 	</script>
 </div>
 
-<div class = "content_area">
+<div onclick=" navigation_modal('close','navigation_id')" class = "content_area">
+		
+		
+	<div class = "code_compare_container">
+			<!-- <section class = "code_compare_container_header"></section> -->
+			<section class = "code_compare_container_header">
+				
+				<select onclick="toggleCodeComparison()" id = "code_compare_id"></select>
+				<select onclick="toggleCodeComparison()" id = "code_compare_language_id"></select>
+				<div onclick = "toggleMode()" id = "code_compare_mode_id"><img id = "code_compare_mode_img_id" src = ""/></div>
+				
+			</section> 
 
-</div>
+			<section  id = "code_compare_container_body">
+						
+			</section>
+	</div>
+	
+
+	<section id = "compare_comparison_id"></section>
+
+</div>	
 	
 <!--footer-->
 <div id = "footer_id">
@@ -63,5 +82,8 @@
 	
 </body>
 
+<script>
+	startupCodeCompare();
+</script>
 
 </html>

@@ -1,1 +1,171 @@
-setupPage(page_index.code_compare);
+const setModeList = [getImageDir("../../")+image_sources.darkMode_icon,
+               getImageDir("../../")+image_sources.lightMode_icon];
+colours = {light_colour: "rgb(250,250,250)",
+           dark_blue_colour: "rgb(0,0,200)",
+           dark_colour: "rgb(10,10,10)",}
+
+let mode = 1;
+
+const programming_languages = [
+                            "Python",
+                             "PHP",
+                             "Java",
+                             "C++",
+                             "Javascript"
+                            ];
+
+const code_comparison_parameters = [
+                                    {
+                                        code_comparison_concept: "Output",
+                                        python_code:      "print("+wrapText("Hello World",opening_double_quote,closing_double_quote)+");",
+                                        php_code:         wrapText(indent(4)+"echo "+ wrapText("Hello World",opening_double_quote,closing_double_quote)+";",
+                                                                    opening_php_tag,
+                                                                    closing_php_tag),
+                                                             
+                                                          
+                                        java_code:        "public static void main(String[ ][ ] args){</br></br>"+
+                                                              indent(2)+"System.out.println("+wrapText("Hello World",opening_double_quote,closing_double_quote)+");</br></br>"+
+                                                          "}",
+                                        c_plus_plus_code: "#include <iostream></br></br>"+
+                                                           "using namespace std;</br></br>"+
+                                                           "#include "+wrapText("string",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+                                                           "int main(){</br></br>"+ 
+                                                                indent(2)+"cout << " + wrapText("Hello World",opening_double_quote,closing_double_quote)+" << endl;</br>"+
+                                                                indent(2)+"return 0;</br></br>"+
+                                                           "}",
+                                        javascript_code: "console.log("+wrapText("Hello World",opening_double_quote,closing_double_quote)+");" 
+                                    },
+                                    {
+                                        code_comparison_concept: "Variable declaration and initialisation",
+                                        python_code:      "newVariable = " + wrapText("Variable declaration and intialisation in python",opening_double_quote,closing_double_quote)+";",
+                                        php_code:         wrapText(indent(4)+"$newVariable = " + wrapText("Variable declaration and intialisation in php",opening_double_quote,closing_double_quote)+";",
+                                                                   opening_php_tag,
+                                                                   closing_php_tag),
+                                        java_code:        "public static void main(String[ ][ ] args){</br></br>"+
+                                                               indent(2)+"String newVariable = " + wrapText("Variable declaration and intialisation in java",opening_double_quote,closing_double_quote)+";</br></br>"+
+                                                          "}",
+                                        c_plus_plus_code: "#include "+wrapText("string",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+                                                          "string newVariable = " + wrapText("Variable declaration and intialisation in c++",opening_double_quote,closing_double_quote)+";",
+                                        javascript_code:  "var newVariable = " + wrapText("Variable declaration and intialisation in javascript",opening_double_quote,closing_double_quote)+";",
+                                    },
+                                    {
+                                        code_comparison_concept: "Constants",
+                                        python_code:      "CONSTANT_VARIABLE = " + wrapText("Constant value in Python",opening_double_quote,closing_double_quote)+";",
+                                        php_code:         wrapText(indent(4)+"define ("+ wrapText("CONSTANTVARIABLE",opening_double_quote,closing_double_quote)+","+ wrapText("Constant value in PHP",opening_double_quote,closing_double_quote)+");</br></br>"+
+                                                                   indent(4)+"echo constant("+wrapText("CONSTANTVARIABLE",opening_double_quote,closing_double_quote)+");",
+                                                                   opening_php_tag,
+                                                                   closing_php_tag),
+                                                          
+                                        java_code:        "public final CONSTANT_VARIABLE = "+wrapText("Constant value in Java",opening_double_quote,closing_double_quote)+";</br></br>"+
+                                                          "public static void main(String[ ][ ] args){</br></br>"+
+                                                               indent(2)+"System.out.println(CONSTANT_VARIABLE);</br></br>"+
+                                                          "}",
+                                        c_plus_plus_code: "#include <iostream></br></br>"+
+                                                          "#include "+wrapText("string",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+                                                          "using namespace std;</br></br>"+
+                                                          "int main(){</br></br>"+
+                                                               indent(2)+"const string CONSTANT_VARIABLE = " + wrapText("Constant value in C++",opening_double_quote,closing_double_quote)+"<br></br>"+ 
+                                                               indent(2)+"cout << CONSTANT_VARIABLE << endl;</br>"+
+                                                               indent(2)+"return 0;</br></br>"+
+                                                           "}",
+                                        javascript_code:  "const CONSTANT_VARIABLE = " + wrapText("Constant value in Javascript",opening_double_quote,closing_double_quote)+";</br></br>"+
+                                                           "console.log(CONSTANT_VARIABLE);",
+                                    }
+                                ]
+function startupCodeCompare(){
+    setupPage(page_index.code_compare);
+    populate_dropdown_list("code_compare_language_id",programming_languages,"A");
+    populate_dropdown_list("code_compare_id",code_comparison_parameters,"B");
+    toggleMode();
+    toggleCodeComparison();
+}
+
+function populate_dropdown_list(dropdown_id,listArr,arrType){
+    let dropdownlist = document.getElementById(dropdown_id); 
+    
+    switch(arrType){
+        case "A":{
+            for(let k = 0; k < listArr.length; k++){
+                let option_element = document.createElement("option");
+                option_element.text = listArr[k];
+                option_element.value = listArr[k];
+                dropdownlist.add(option_element);
+        }
+        }break;
+        case "B":{
+            for(let k = 0; k < listArr.length; k++){
+                let option_element = document.createElement("option");
+                option_element.text = listArr[k].code_comparison_concept;
+                option_element.value = listArr[k].code_comparison_concept;
+                dropdownlist.add(option_element);
+        }
+        }break;
+        
+    }
+}
+
+function toggleMode(){
+    let setImageMode = document.getElementById("code_compare_mode_img_id");
+    let codeArea = document.getElementById("code_compare_container_body");
+    
+    switch(mode){
+        case 0:{
+           setImageMode.src = setModeList[mode];
+           codeArea.style.backgroundColor = colours.dark_colour;
+           codeArea.style.color = colours.light_colour;
+           mode = 1;
+        }break;
+
+        case 1:{
+           setImageMode.src = setModeList[mode];
+           codeArea.style.backgroundColor = colours.light_colour;
+           codeArea.style.color = colours.dark_blue_colour;
+           mode = 0;
+        }break;
+    }
+
+    
+}
+
+function toggleCodeComparison(){
+    let code_to_compare = document.getElementById("code_compare_id");
+    let code_language = document.getElementById("code_compare_language_id").value;
+    let codeArea = document.getElementById("code_compare_container_body");
+   
+    // find index
+    let index_to_find = 0;
+    for(let i = 0 ; i < code_comparison_parameters.length;i++){
+        if(code_comparison_parameters[i].code_comparison_concept === code_to_compare.value){
+            index_to_find = i;
+            break;
+        }
+       
+    }
+
+    switch(code_language){
+        case programming_languages[0]:{
+            codeArea.innerHTML = "<code>"+code_comparison_parameters[index_to_find].python_code + "</code>";
+           
+        }break;
+
+        
+        case programming_languages[1]:{
+            codeArea.innerHTML = "<code>"+code_comparison_parameters[index_to_find].php_code + "</code>";
+        }break;
+
+        
+        case programming_languages[2]:{
+            codeArea.innerHTML = "<code>"+code_comparison_parameters[index_to_find].java_code + "</code>";
+        }break;
+
+        
+        case programming_languages[3]:{
+            codeArea.innerHTML = "<code>"+code_comparison_parameters[index_to_find].c_plus_plus_code + "</code>";
+        }break;
+
+        
+        case programming_languages[4]:{
+            codeArea.innerHTML = "<code>"+code_comparison_parameters[index_to_find].javascript_code + "</code>";
+        }break;
+    }
+}

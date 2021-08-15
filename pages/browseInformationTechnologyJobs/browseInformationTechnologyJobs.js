@@ -1,1 +1,0 @@
-setupPage(page_index.browse_information_technology_jobs);

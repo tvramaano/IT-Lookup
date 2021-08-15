@@ -3,33 +3,6 @@ const type = {template: "template", defintion: "definition"};
 const programming_concepts_headers = {concept_name: "Sort by: name", concept_category: "Sort by: default"};
 const updated_dates = {updated_date_1: "Latest update: 25 July 2021"}
 
-const tab = "&nbsp;";
-const opening_double_quote = "“";
-const closing_double_quote = "”";
-
-const opening_single_quote = "‘";
-const closing_single_quote = "’";
-
-const opening_angle_bracket = "<text><</text>";
-const opening_angle_bracket_1 = "<text>&lt;</text><text>&#0047;</text>";
-const closing_angle_bracket_1 = "<text>></text>";
-const closing_angle_bracket = "<text>/></text>";
-
-const opening_php_tag = "<text><</text><text>?</text><text>php</text>";
-const closing_php_tag = "<text>?></text>";
-
-function wrapText(strText,opening_char,closing_char){
-	return opening_char + ""+ strText + ""+ closing_char;
-}
-
-function indent(num_spaces){
-	let indentations = "";
-	for(let i = 0 ; i < num_spaces;i++){
-		indentations += tab;
-	}
-	return indentations;
-}
-
 var programming_concepts = [
 {programming_concept_name: "byte", 
 programming_concept_category: categories[1].category_name,

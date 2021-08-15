@@ -21,6 +21,7 @@
 	<script src ="components/modal/modal.js" type ="text/javascript"></script>
 	<script src ="components/header/header.js" type ="text/javascript"></script>
 	<script src ="pages/programmingConcepts/programming_definitions.js" type ="text/javascript"></script>
+	<script src ="pages/codeCompare/codeCompare.js" type ="text/javascript"></script>
 	
   
 </head>
@@ -46,12 +47,8 @@
 		<div class = "home_page_tabs_container">
 			<div onclick="goToPage(page_index.programming_concepts,'')" class = "home_page_tab"><img src= "images/programming_concepts_icon.png"/><p id = "programming_concepts_id"><script>getPageName(page_index.programming_concepts,"programming_concepts_id");</script></p></div>
 			<div onclick="goToPage(page_index.code_compare,'')" class = "home_page_tab"><img src= "images/code_compare_icon.png"/><p>Code Comparisons</p></div>
-			<div onclick="goToPage(page_index.browse_information_technology_jobs,'')" class = "home_page_tab"><img src= "images/browse_IT_careers_icon.png"/><p id = "browse_IT_careers_id"><script>getPageName(page_index.browse_information_technology_jobs,"browse_IT_careers_id");</script></p></div>
-			
-		   <div onclick="goToPage(page_index.prepare_my_career,'')" class = "home_page_tab"><img src= "images/career_prepare_icon.png"/><p id = "career_prepare_id"><script>getPageName(page_index.prepare_my_career,"career_prepare_id");</script></p></div>
-		   <div onclick="goToPage(page_index.frequently_asked_questions,'')" class = "home_page_tab"><img src= "images/faq_icon.png"/><p id = "faq_id"><script>getPageName(page_index.frequently_asked_questions,"faq_id");</script></p></div>
-		   <div onclick="goToPage(page_index.IT_study_choices,'')" class = "home_page_tab"><img src= "images/IT_study_choices_icon.png"/><p id = "IT_study_choices_id"><script>getPageName(page_index.IT_study_choices,"IT_study_choices_id");</script></p></div>  
-		  
+			<div onclick="goToPage(page_index.prepare_my_career,'')" class = "home_page_tab"><img src= "images/career_prepare_icon.png"/><p id = "career_prepare_id"><script>getPageName(page_index.prepare_my_career,"career_prepare_id");</script></p></div>
+		   
 		   <div onclick="goToPage(page_index.about,'')" class = "home_page_tab"><img src= "images/about_icon.png"/><p id = "about_id"><script>getPageName(page_index.about,"about_id");</script></p></div>
 		   <div onclick="goToPage(page_index.prepare_my_career,'')" class = "home_page_tab"><img src= "images/terms_and_conditions_icon.png"/><p id = "terms_and_conditions_id"><script>getPageName(page_index.terms_and_conditions,"terms_and_conditions_id");</script></p></div>
 		   <div onclick="goToPage(page_index.frequently_asked_questions,'')" class = "home_page_tab"><img src= "images/privacy_policy_icon.png"/><p id = "privacy_policy_id"><script>getPageName(page_index.privacy_policy,"privacy_policy_id");</script></p></div>
@@ -65,22 +62,10 @@
 				<div class = "home_page_count_container_section"><code>Programming concepts</code></div>
 			</div>
 			<div class = "home_page_count_container">
-				<div class = "home_page_count_container_section_value"><code>0</code></div>
+				<div class = "home_page_count_container_section_value" id = "count_compare_code_concepts"><code>0</code></div>
 				<div class = "home_page_count_container_section"><code>Code comparisons</code></div>
 			</div>
-			<div class = "home_page_count_container">
-				<div class = "home_page_count_container_section_value"><code>0</code></div>
-				<div class = "home_page_count_container_section"><code>Frequently asked questions</code></div>
-			</div>
-			<div class = "home_page_count_container">
-				<div class = "home_page_count_container_section_value"><code>0</code></div>
-				<div class = "home_page_count_container_section"><code>Information Technology careers</code></div>
-			</div>
-
-			<div class = "home_page_count_container">
-				<div class = "home_page_count_container_section_value"><code>0</code></div>
-				<div class = "home_page_count_container_section"><code>IT-related study choices</code></div>
-			</div>
+			
 	   </div>
 	</div>
 	

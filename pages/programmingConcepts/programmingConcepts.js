@@ -6,6 +6,7 @@ const POPULATE_VALUES_ID = "populated_values_id";
 
 
 function page_startup(){
+	setupPage(page_index.programming_concepts);
     populate_categories_dropdown_list();
     get_list_of_concepts(document.getElementById(PROGRAMMING_CONCEPT_INPUT_ID), programming_concepts,POPULATE_VALUES_ID,POPULATE_OPTIONS_CLASS);
     populate_programming_concepts(search_flags.search_all,document.getElementById(PROGRAMMING_CONCEPT_INPUT_ID).value);

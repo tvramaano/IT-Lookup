@@ -12,6 +12,8 @@ const image_sources = {
     programming_concepts_icon: "images/programming_concepts_icon.png",
     career_prepare_icon: "images/career_prepare_icon.png",
     faq_icon: "images/faq_icon.png",
+    darkMode_icon: "images/darkMode.png",
+    lightMode_icon: "images/lightMode.png",
    
 }
 

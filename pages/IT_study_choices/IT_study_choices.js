@@ -1,1 +1,0 @@
-setupPage(page_index.IT_study_choices);

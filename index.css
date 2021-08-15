@@ -39,6 +39,8 @@ body{
 .content_area{
   margin-top: 130px;
   margin-bottom: 20px;
+  width: 100%;
+  float: left;
 }
 
 .content_area h2,.content_area p{
@@ -62,8 +64,8 @@ body{
   text-align: center;
   padding-top: 2%;
   padding-bottom: 2%;
-  margin-left: 30vw;
-  margin-right: 30vw;
+  margin-left: 1vw;
+  margin-right: 54vw;
   float: left;
 }
 

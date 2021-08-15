@@ -5,10 +5,7 @@ const page_index = {
                     about: 3,
                     programming_concepts: 4, 
                     code_compare: 5, 
-                    frequently_asked_questions: 6, 
-                    prepare_my_career: 7,
-                    browse_information_technology_jobs: 8,
-                    IT_study_choices: 9
+                    prepare_my_career: 6,
                 };
 
 const page_setup_parameters = [
@@ -64,37 +61,41 @@ const page_setup_parameters = [
         icon_id: "web_icon_id",
         icon_source: "../../"+image_sources.website_icon,
         page_id: "page_title_id",
-        page_name: "Frequently Asked Questions",
-        tab_id: "frequently_asked_questions_id",
-        page_url: "pages/frequentlyAskedQuestions/frequentlyAskedQuestions.html"
-    },
-    {
-        icon_id: "web_icon_id",
-        icon_source: "../../"+image_sources.website_icon,
-        page_id: "page_title_id",
         page_name: "Prepare myself for a career in Information Technology",
         tab_id: "prepare_my_career_id",
         page_url: "pages/prepareMyCareer/prepareMyCareer.html"
     },
-    {
-        icon_id: "web_icon_id",
-        icon_source: "../../"+image_sources.website_icon,
-        page_id: "page_title_id",
-        page_name: "Browse Information Technology careers",
-        tab_id: "browse_IT_careers_id",
-        page_url: "pages/browseInformationTechnologyJobs/browseInformationTechnologyJobs.html"
-    },
-    {
-        icon_id: "web_icon_id",
-        icon_source: "../../"+image_sources.website_icon,
-        page_id: "page_title_id",
-        page_name: "Information Technology related study options",
-        tab_id: "IT_study_choices_id",
-        page_url: "pages/IT_study_choices/IT_study_choices.html"
-    }
+
 
 
 ]
+
+const tab = "&nbsp;";
+const opening_double_quote = "“";
+const closing_double_quote = "”";
+
+const opening_single_quote = "‘";
+const closing_single_quote = "’";
+
+const opening_angle_bracket = "<text><</text>";
+const opening_angle_bracket_1 = "<text>&lt;</text><text>&#0047;</text>";
+const closing_angle_bracket_1 = "<text>></text>";
+const closing_angle_bracket = "<text>/></text>";
+
+const opening_php_tag = "<text><</text><text>?</text><text>php</text></br></br>";
+const closing_php_tag = "<text></br></br>?></text>";
+
+function wrapText(strText,opening_char,closing_char){
+	return opening_char + ""+ strText + ""+ closing_char;
+}
+
+function indent(num_spaces){
+	let indentations = "";
+	for(let i = 0 ; i < num_spaces;i++){
+		indentations += tab;
+	}
+	return indentations;
+}
 
 function setupPage(page_name){
     // setup the page icon
@@ -121,6 +122,7 @@ function getPageName(page_index,page_id){
 
 function count_web_items(){
 	document.getElementById("count_programming_concepts").innerHTML = programming_concepts.length;
+    document.getElementById("count_compare_code_concepts").innerHTML = code_comparison_parameters.length;
 }
 
 function startup_index(){
