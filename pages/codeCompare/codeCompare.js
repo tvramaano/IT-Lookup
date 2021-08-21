@@ -128,27 +128,13 @@ const code_comparison_parameters = [
                                                                    opening_php_tag,
                                                                    closing_php_tag),
                                                           
-                                        java_code:        "public void newFunction(){</br></br>"+
-                                                           indent(2) + "System.out.println("+ wrapText("Function creation in Java",opening_double_quote,closing_double_quote)+");</br></br>"+
-                                                           "}</br></br>"+
-
-                                                          "public static void main(String[][] args){</br></br>"+
-                                                               indent(2)+"newFunction();</br></br>"+
-                                                          "}",
+                                        java_code:        "import <i>file path name</i>",
                                         c_plus_plus_code: "#include "+wrapText("iostream",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
                                                           "#include "+wrapText("string",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
-                                                          "using namespace std;</br></br>"+
-                                                          "void newFunction(){</br></br>"+
-                                                          indent(2)+"cout << " +wrapText("Function creation in C++",opening_double_quote,closing_double_quote) + " << endl;</br></br>"+
-                                                          "}</br></br>"+
-                                                          "int main(){</br></br>"+
-                                                               indent(2)+ "newFunction()</br>"+
-                                                               indent(2)+"return 0;</br></br>"+
-                                                           "}",
-                                        javascript_code:   "function newFunction(){</br></br>"+
-                                                           indent(2) + "console.log(" + wrapText("Function creation in Javascript",opening_double_quote,closing_double_quote)+");</br></br>"+
-                                                           "}</br></br>"+
-                                                           "newFunction();",
+                                                          "using namespace std;</br></br>",
+                                                         
+                                        javascript_code:   "import {newFileName} from <i>File path name</i>{</br>",
+                                                           
                                         output: "" 
                                     }
                                 ]
@@ -237,32 +223,37 @@ function toggleCodeComparison(){
     switch(code_language){
         case programming_languages[0]:{
             codeArea.innerHTML = "<code>"+code_comparison_parameters[index_to_find].python_code + "</code>";
-            codeOutput.innerHTML += "<code>> "+code_comparison_parameters[index_to_find].output + " in Python</code>";
+            if(code_comparison_parameters[index_to_find].output != "")
+                codeOutput.innerHTML += "<code>> "+code_comparison_parameters[index_to_find].output + " in Python</code>";
            
         }break;
 
         
         case programming_languages[1]:{
             codeArea.innerHTML = "<code>"+code_comparison_parameters[index_to_find].php_code + "</code>";
-            codeOutput.innerHTML += "<code>> "+code_comparison_parameters[index_to_find].output + " in PHP</code>";
+            if(code_comparison_parameters[index_to_find].output != "")
+                codeOutput.innerHTML += "<code>> "+code_comparison_parameters[index_to_find].output + " in PHP</code>";
         }break;
 
         
         case programming_languages[2]:{
             codeArea.innerHTML = "<code>"+code_comparison_parameters[index_to_find].java_code + "</code>";
-            codeOutput.innerHTML += "<code>> "+code_comparison_parameters[index_to_find].output + " in Java</code>";
+            if(code_comparison_parameters[index_to_find].output != "")
+                codeOutput.innerHTML += "<code>> "+code_comparison_parameters[index_to_find].output + " in Java</code>";
         }break;
 
         
         case programming_languages[3]:{
             codeArea.innerHTML = "<code>"+code_comparison_parameters[index_to_find].c_plus_plus_code + "</code>";
-            codeOutput.innerHTML += "<code>> "+code_comparison_parameters[index_to_find].output + " in C++</code>";
+            if(code_comparison_parameters[index_to_find].output != "")
+                codeOutput.innerHTML += "<code>> "+code_comparison_parameters[index_to_find].output + " in C++</code>";
         }break;
 
         
         case programming_languages[4]:{
             codeArea.innerHTML = "<code>"+code_comparison_parameters[index_to_find].javascript_code + "</code>";
-            codeOutput.innerHTML += "<code> >"+code_comparison_parameters[index_to_find].output + " in Javascript</code>";
+            if(code_comparison_parameters[index_to_find].output != "")
+                codeOutput.innerHTML += "<code> >"+code_comparison_parameters[index_to_find].output + " in Javascript</code>";
         }break;
     }
 }

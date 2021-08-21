@@ -14,12 +14,15 @@
 	<link rel="stylesheet" href="components/footer/footer.css"/>
 	<link rel="stylesheet" href="components/modal/modal.css"/>
 	<link rel="stylesheet" href="components/header/header.css"/>
+	<link rel="stylesheet" href="components/card/card.css"/>
 
 	<script src="images/imageSources.js" type="text/javascript"></script>
     <script src="index.js" type="text/javascript"></script>
 	<script src ="components/footer/footer.js" type ="text/javascript"></script>
 	<script src ="components/modal/modal.js" type ="text/javascript"></script>
 	<script src ="components/header/header.js" type ="text/javascript"></script>
+	<script src ="components/navigation/navigation.js" type ="text/javascript"></script>
+	<script src ="components/card/card.js" type ="text/javascript"></script>
 	<script src ="pages/programmingConcepts/programming_definitions.js" type ="text/javascript"></script>
 	<script src ="pages/codeCompare/codeCompare.js" type ="text/javascript"></script>
 	
@@ -30,43 +33,124 @@
 
 
 <div class = "home_page">
+	<div class = "home_page_header">
+		<div class = "home_page_header_section">
+			<img src = "images/website_icon.png" />
+			<h1> <code> < Hello World /> </code> </h1>
+			<p>Our job is to solidify the fundamentals of programming in order for you to master the craft</p>
+			<button 
+				class = "mobile_button"
+				onclick="navigation_modal('open','subscription_box_mobile')"
+			>
+				Subscribe for updates
+			</button>
+		</div>
+		<div class = "home_page_header_section" id = "subscription_box_id">
+			<div class = 'subscription_box'>
+				<div class = "horizontal_line"></div>
+				<h3>Subscribe for updates</h3>
+				
+				<input type = 'text' placeholder = 'Email address' />
+				<button>
+					Subscribe
+				</button>
+				<p>By subscribing with us, we will be able to send you any updates that we may have done on the website as well as any notifications that we may have for you related to improving your programming skills</p>
+			 </div>
+		</div>
+	</div>
+	<div id = "subscription_box_mobile" class = 'subscription_box hide'>
+		<div class = "horizontal_line"></div>
+		<h3>Subscribe for updates</h3>
+		
+		<input type = 'text' placeholder = 'Email address' />
+		<button>Subscribe</button>
+		<button
+			onclick="navigation_modal('close','subscription_box_mobile')"
+		>
+			close
+		</button>
+		<p>By subscribing with us, we will be able to send you any updates that we may have done on the website as well as any notifications that we may have for you related to improving your programming skills</p>
+	 </div>
 	<div class = "home_page_container">
-		<div class = "home_page_heading">
-			<img src = "images/website_logo.png" />
-		</div>
-		<div class = "horizontal_line"></div>
-		<div class = "home_page_subheading">
-			<code>Our job is to solidify the fundamentals in order for you to master the craft</code>
-		</div>
-
-		<div class = "horizontal_line"></div>
-		<div class = "home_page_subheading">
-			<code> -- A place to develop my skills in programming -- </code>	
-		</div>
-
+		
 		<div class = "home_page_tabs_container">
-			<div onclick="goToPage(page_index.programming_concepts,'')" class = "home_page_tab"><img src= "images/programming_concepts_icon.png"/><p id = "programming_concepts_id"><script>getPageName(page_index.programming_concepts,"programming_concepts_id");</script></p></div>
-			<div onclick="goToPage(page_index.code_compare,'')" class = "home_page_tab"><img src= "images/code_compare_icon.png"/><p>Code Comparisons</p></div>
-			<div onclick="goToPage(page_index.prepare_my_career,'')" class = "home_page_tab"><img src= "images/career_prepare_icon.png"/><p id = "career_prepare_id"><script>getPageName(page_index.prepare_my_career,"career_prepare_id");</script></p></div>
-		   
-		   <div onclick="goToPage(page_index.about,'')" class = "home_page_tab"><img src= "images/about_icon.png"/><p id = "about_id"><script>getPageName(page_index.about,"about_id");</script></p></div>
-		   <div onclick="goToPage(page_index.prepare_my_career,'')" class = "home_page_tab"><img src= "images/terms_and_conditions_icon.png"/><p id = "terms_and_conditions_id"><script>getPageName(page_index.terms_and_conditions,"terms_and_conditions_id");</script></p></div>
-		   <div onclick="goToPage(page_index.frequently_asked_questions,'')" class = "home_page_tab"><img src= "images/privacy_policy_icon.png"/><p id = "privacy_policy_id"><script>getPageName(page_index.privacy_policy,"privacy_policy_id");</script></p></div>
-		  
+		 <div id = "programming_concepts_tab_id">
+			<script>
+						openNavigation(
+								"programming_concepts_tab_id",
+								"<h2>"+getPageName(page_index.programming_concepts)+"<h2>",
+								"<p>Get access to " + programming_concepts.length +" programming definitions that will supplement your learning.</p>",
+								"images/programming_concepts_icon.png",
+								page_index.programming_concepts
+						 );
+			</script>
+	   </div>
+
+	   <div id = "code_compare_tab_id">
+			<script>
+						openNavigation(
+								"code_compare_tab_id",
+								"<h2>"+getPageName(page_index.code_compare)+"<h2>",
+								"<p>See how different concepts are implemented using different programming languages.</p>",
+								"images/code_compare_icon.png",
+								page_index.code_compare
+						);
+			</script>
+		</div>
+
+		<div id = "prepare_my_career_tab_id">
+			<script>
+						openNavigation(
+								"prepare_my_career_tab_id",
+								"<h2>"+getPageName(page_index.prepare_my_career)+"<h2>",
+								"<p>We will help you prepare your CV so as to kick start your peogramming career.</p>",
+								"images/career_prepare_icon.png",
+								page_index.prepare_my_career
+						);
+			</script>
+		</div>
+
+		<div id = "about_tab_id">
+			<script>
+						openNavigation(
+								"about_tab_id",
+								"<h2>"+getPageName(page_index.about)+"<h2>",
+								"<p>Get to know us a little bit more. We explain our vision and goals for the company and get to know the team behind Hello World</p>",
+								"images/about_icon.png",
+								page_index.about
+						);
+			</script>
+		</div>
+
+		<div id = "terms_and_conditions_tab_id">
+			<script>
+						openNavigation(
+								"terms_and_conditions_tab_id",
+								"<h2>"+getPageName(page_index.terms_and_conditions)+"<h2>",
+								"<p>Familiarise yourself with our terms and conditions.</p>",
+								"images/terms_and_conditions_icon.png",
+								page_index.terms_and_conditions
+						);
+			</script>
+		</div>
+
+		<div id = "privacy_policy_tab_id">
+			<script>
+						openNavigation(
+								"privacy_policy_tab_id",
+								"<h2>"+getPageName(page_index.privacy_policy)+"<h2>",
+								"<p>Familiarise yourself with our privacy policy.</p>",
+								"images/privacy_policy_icon.png",
+								page_index.privacy_policy
+						);
+			</script>
+		</div>
+
+
 		   
 	   </div>
 	   
-	   <div class = "home_page_count">
-			<div class = "home_page_count_container">
-				<div class = "home_page_count_container_section_value"><code id = "count_programming_concepts">0</code></div>
-				<div class = "home_page_count_container_section"><code>Programming concepts</code></div>
-			</div>
-			<div class = "home_page_count_container">
-				<div class = "home_page_count_container_section_value" id = "count_compare_code_concepts"><code>0</code></div>
-				<div class = "home_page_count_container_section"><code>Code comparisons</code></div>
-			</div>
-			
-	   </div>
+	  
 	</div>
 	
 	

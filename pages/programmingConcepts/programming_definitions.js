@@ -1651,7 +1651,7 @@ programming_concept_example: "<code>"+
 
 							 "</code>"
 },
-{programming_concept_name: "float", 
+{programming_concept_name: "float (css)", 
 programming_concept_category: categories[8].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
@@ -1691,6 +1691,574 @@ programming_concept_example: "<code>"+
 								indent(2)+ "float: right;</br>"+
 								indent(2)+ "width: 30%;</br>"+
 								"}</br>"+
+
+								
+							 "</code>"
+},
+{programming_concept_name: "media screen", 
+programming_concept_category: categories[8].category_name,
+programming_concept_type: type.defintion,
+programming_concept_date: updated_dates.updated_date_1,
+programming_concept_definition: "This is used to specify css for a specific screen width size. We can choose to use max-width or min-width depending on your intention.",
+programming_concept_example: "<code>"+
+								wrapText("html",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+									
+										indent(2) + wrapText("head",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+											indent(4)+"...</br></br>"+
+										indent(2) + wrapText("head",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4)+"...</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+										
+										
+										
+								wrapText("html",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+								
+								"<u>CSS File</u></br></br>"+
+								
+								"/*Apply this CSS to all screen width size up to 769 pixels*/</br></br>"+
+								"@media screen and (max-width: 769px){</br>"+
+									indent(2)+"body{</br>"+
+										indent(4)+"...</br>"+
+									indent(2)+"}</br>"+
+								
+								"}</br></br>"+
+
+								"/*Apply this CSS to all screen width sizes from 769 pixels upwards*/</br></br>"+
+								"@media screen and (min-width: 769px){</br>"+
+									indent(2)+"body{</br>"+
+										indent(4)+"...</br>"+
+									indent(2)+"}</br>"+
+								
+								"}</br>"+
+
+								
+							 "</code>"
+},
+
+{programming_concept_name: "border-radius", 
+programming_concept_category: categories[8].category_name,
+programming_concept_type: type.defintion,
+programming_concept_date: updated_dates.updated_date_1,
+programming_concept_definition: "This css style allow one to alter the curvature of the border edges. If the value is 0, then the border egdes become sharp corners.",
+programming_concept_example: "<code>"+
+								wrapText("html",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+									
+										indent(2) + wrapText("head",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+											indent(4)+"...</br></br>"+
+										indent(2) + wrapText("head",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + wrapText("div",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+												indent(6)+"Alter the curvature of this box</br></br>"+
+											indent(4) + wrapText("div",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+										
+										
+										
+								wrapText("html",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+								
+								"<u>CSS File</u></br></br>"+
+								
+								"div{</br>"+
+									
+									indent(2)+"height: 100px;</br>"+
+									indent(2)+"weight: 100px;</br>"+
+									indent(2)+"border-radius: 10px;</br>"+
+
+								"}</br></br>"+
+
+
+								
+							 "</code>"
+},
+
+{programming_concept_name: "border", 
+programming_concept_category: categories[8].category_name,
+programming_concept_type: type.defintion,
+programming_concept_date: updated_dates.updated_date_1,
+programming_concept_definition: "This css style allow one to alter the border properties including: thckness, color and style of an element.",
+programming_concept_example: "<code>"+
+								wrapText("html",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+									
+										indent(2) + wrapText("head",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+											indent(4)+"...</br></br>"+
+										indent(2) + wrapText("head",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + wrapText("div",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+												indent(6)+"Alter the border properies of this element</br></br>"+
+											indent(4) + wrapText("div",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+										
+										
+										
+								wrapText("html",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+								
+								"<u>CSS File</u></br></br>"+
+								
+								"div{</br>"+
+									
+									indent(2)+"height: 100px;</br>"+
+									indent(2)+"weight: 100px;</br>"+
+									indent(2)+"border-radius: 10px;</br>"+
+									indent(2)+"border: 1px solid yellow;</br>"+
+
+								"}</br></br>"+
+
+								"/*The following below is the same as above*/</br></br>"+
+								"div{</br>"+
+									
+									indent(2)+"height: 100px;</br>"+
+									indent(2)+"weight: 100px;</br>"+
+									indent(2)+"border-radius: 10px;</br>"+
+									indent(2)+"border-left: 1px solid yellow;</br>"+
+									indent(2)+"border-right: 1px solid yellow;</br>"+
+									indent(2)+"border-bottom: 1px solid yellow;</br>"+
+									indent(2)+"border-top: 1px solid yellow;</br>"+
+
+								"}</br></br>"+
+
+
+
+								
+							 "</code>"
+},
+{programming_concept_name: "display", 
+programming_concept_category: categories[8].category_name,
+programming_concept_type: type.defintion,
+programming_concept_date: updated_dates.updated_date_1,
+programming_concept_definition: "This css style describes the way an element is displayed. Some property values of display include block, flex, inline, inline-block, inline-flex, inherit, none and grid.",
+programming_concept_example: "<code>"+
+								wrapText("html",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+									
+										indent(2) + wrapText("head",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+											indent(4)+"...</br></br>"+
+										indent(2) + wrapText("head",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + wrapText("div class = "+wrapText("display_block",opening_double_quote,closing_double_quote),opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+												indent(6)+"This element is displayed as a block element.</br></br>"+
+											indent(4) + wrapText("div",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + wrapText("div class = "+wrapText("display_none",opening_double_quote,closing_double_quote),opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+												indent(6)+"This element is not shown.</br></br>"+
+											indent(4) + wrapText("div",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + wrapText("div class = "+wrapText("display_flex",opening_double_quote,closing_double_quote),opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+												indent(6)+"This element is displayed as flex.</br></br>"+
+											indent(4) + wrapText("div",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + wrapText("div class = "+wrapText("display_inline",opening_double_quote,closing_double_quote),opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+												indent(6)+"This element is displayed as inline. It does not have width and height properties.</br></br>"+
+											indent(4) + wrapText("div",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+										
+										
+										
+								wrapText("html",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+								
+								"<u>CSS File</u></br></br>"+
+								
+								".display_block{</br>"+
+									
+									indent(2)+"display: block;</br>"+
+
+								"}</br></br>"+
+
+								".display_none{</br>"+
+									
+									indent(2)+"display: none;</br>"+
+
+								"}</br></br>"+
+
+								".display_flex{</br>"+
+									
+									indent(2)+"display: flex;</br>"+
+
+								"}</br></br>"+
+
+								".display_inline{</br>"+
+									
+									indent(2)+"display: inline;</br>"+
+
+								"}</br></br>"+
+
+
+
+								
+							 "</code>"
+},
+
+{programming_concept_name: "background-image", 
+programming_concept_category: categories[8].category_name,
+programming_concept_type: type.defintion,
+programming_concept_date: updated_dates.updated_date_1,
+programming_concept_definition: "This css style allows one to set the background image of a container",
+programming_concept_example: "<code>"+
+								wrapText("html",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+									
+										indent(2) + wrapText("head",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+											indent(4)+"...</br></br>"+
+										indent(2) + wrapText("head",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + "...</br></br>"+
+											
+										indent(2) + wrapText("body",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+										
+										
+										
+								wrapText("html",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+								
+								"<u>CSS File</u></br></br>"+
+								
+								"body{</br>"+
+									
+									indent(2)+"background-image: url(/*path to image file*/);</br>"+
+
+								"}</br></br>"+
+
+
+								
+							 "</code>"
+},
+
+{programming_concept_name: "z-index", 
+programming_concept_category: categories[8].category_name,
+programming_concept_type: type.defintion,
+programming_concept_date: updated_dates.updated_date_1,
+programming_concept_definition: "This value from this css style determines whether an element is displayed in front or behind of another element. Elements with a higher z-index are in front of elements with a lower index.",
+programming_concept_example: "<code>"+
+								wrapText("html",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+									
+										indent(2) + wrapText("head",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+											indent(4)+"...</br></br>"+
+										indent(2) + wrapText("head",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + wrapText("div class = "+wrapText("display_in_front",opening_double_quote,closing_double_quote),opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+												indent(6)+"This element is displayed in front.</br></br>"+
+											indent(4) + wrapText("div",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + wrapText("div class = "+wrapText("display_behind",opening_double_quote,closing_double_quote),opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+												indent(6)+"This element is displayed behind.</br></br>"+
+											indent(4) + wrapText("div",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+											
+										indent(2) + wrapText("body",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+										
+										
+										
+								wrapText("html",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+								
+								"<u>CSS File</u></br></br>"+
+								
+								".display_in_front{</br>"+
+									
+									indent(2)+"position: absolute;</br>"+
+									indent(2)+"width: 200px</br>"+
+									indent(2)+"height: 200px</br>"+
+									indent(2)+"z-index: 1</br>"+
+
+								"}</br></br>"+
+
+								".display_behind{</br>"+
+									
+									indent(2)+"position: absolute;</br>"+
+									indent(2)+"width: 500px</br>"+
+									indent(2)+"height: 500px</br>"+
+									indent(2)+"z-index: -1</br>"+
+
+								"}</br></br>"+
+
+
+								
+							 "</code>"
+},
+
+{programming_concept_name: "opacity", 
+programming_concept_category: categories[8].category_name,
+programming_concept_type: type.defintion,
+programming_concept_date: updated_dates.updated_date_1,
+programming_concept_definition: "This css style has values between 0 and 1 where values close to 1 means that the element is less transparent whereas values close to 0 means that the element is more transparent.",
+programming_concept_example: "<code>"+
+								wrapText("html",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+									
+										indent(2) + wrapText("head",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+											indent(4)+"...</br></br>"+
+										indent(2) + wrapText("head",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + wrapText("div class = "+wrapText("set_opacity",opening_double_quote,closing_double_quote),opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+												indent(6)+"Set opacity for this element.</br></br>"+
+											indent(4) + wrapText("div",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+										
+										
+										
+								wrapText("html",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+								
+								"<u>CSS File</u></br></br>"+
+								
+								".set_opacity{</br>"+
+									
+									indent(2)+"width: 200px</br>"+
+									indent(2)+"height: 200px</br>"+
+									indent(2)+"opacity: 0.5</br>"+
+
+								"}</br></br>"+
+
+
+								
+							 "</code>"
+},
+
+{programming_concept_name: "cursor", 
+programming_concept_category: categories[8].category_name,
+programming_concept_type: type.defintion,
+programming_concept_date: updated_dates.updated_date_1,
+programming_concept_definition: "This css style allows one to set the cursor pointer. Some propery values for cursor include: pointer, progress, default, zoom-in, zoom-out, none, copy, etc.",
+programming_concept_example: "<code>"+
+								wrapText("html",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+									
+										indent(2) + wrapText("head",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+											indent(4)+"...</br></br>"+
+										indent(2) + wrapText("head",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + wrapText("div class = "+wrapText("cursor_pointer",opening_double_quote,closing_double_quote),opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+												indent(6)+"Set the cursor to pointer which is the hand ponting icon</br></br>"+
+											indent(4) + wrapText("div",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + wrapText("div class = "+wrapText("cursor_copy",opening_double_quote,closing_double_quote),opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+												indent(6)+"Set the cursor to copy icon</br></br>"+
+											indent(4) + wrapText("div",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + wrapText("div class = "+wrapText("cursor_progress",opening_double_quote,closing_double_quote),opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+												indent(6)+"Set the cursor to progress icon</br></br>"+
+											indent(4) + wrapText("div",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + wrapText("div class = "+wrapText("cursor_zoom_in",opening_double_quote,closing_double_quote),opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+												indent(6)+"Set the cursor to zoom-in icon</br></br>"+
+											indent(4) + wrapText("div",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + wrapText("div class = "+wrapText("cursor_zoom_out",opening_double_quote,closing_double_quote),opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+												indent(6)+"Set the cursor to zoom-out icon</br></br>"+
+											indent(4) + wrapText("div",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+
+										indent(2) + wrapText("body",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+										
+										
+										
+								wrapText("html",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+								
+								"<u>CSS File</u></br></br>"+
+								
+								".cursor_pointer{</br>"+
+									
+									indent(2)+"cursor: pointer</br>"+
+
+								"}</br></br>"+
+
+								".cursor_copy{</br>"+
+									
+									indent(2)+"cursor: copy</br>"+
+
+								"}</br></br>"+
+
+								".cursor_progress{</br>"+
+									
+									indent(2)+"cursor: progress</br>"+
+
+								"}</br></br>"+
+
+								".cursor_zoom_in{</br>"+
+									
+									indent(2)+"cursor: zoom-in</br>"+
+
+								"}</br></br>"+
+
+								".cursor_zoom_out{</br>"+
+									
+									indent(2)+"cursor: zoom-out</br>"+
+
+								"}</br></br>"+
+
+
+								
+							 "</code>"
+},
+
+{programming_concept_name: "top", 
+programming_concept_category: categories[8].category_name,
+programming_concept_type: type.defintion,
+programming_concept_date: updated_dates.updated_date_1,
+programming_concept_definition: "This css style positions the element at the top of a web page",
+programming_concept_example: "<code>"+
+								wrapText("html",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+									
+										indent(2) + wrapText("head",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+											indent(4)+"...</br></br>"+
+										indent(2) + wrapText("head",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + wrapText("div class = "+wrapText("top",opening_double_quote,closing_double_quote),opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+												indent(6)+"Set element to the top.</br></br>"+
+											indent(4) + wrapText("div",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+										
+										
+										
+								wrapText("html",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+								
+								"<u>CSS File</u></br></br>"+
+								
+								".top{</br>"+
+									
+									indent(2)+"top: 0;</br>"+
+
+								"}</br></br>"+
+
+
+								
+							 "</code>"
+},
+
+{programming_concept_name: "bottom", 
+programming_concept_category: categories[8].category_name,
+programming_concept_type: type.defintion,
+programming_concept_date: updated_dates.updated_date_1,
+programming_concept_definition: "This css style positions the element at the bottom of a web page",
+programming_concept_example: "<code>"+
+								wrapText("html",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+									
+										indent(2) + wrapText("head",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+											indent(4)+"...</br></br>"+
+										indent(2) + wrapText("head",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + wrapText("div class = "+wrapText("bottom",opening_double_quote,closing_double_quote),opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+												indent(6)+"Set element to the bottom.</br></br>"+
+											indent(4) + wrapText("div",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+										
+										
+										
+								wrapText("html",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+								
+								"<u>CSS File</u></br></br>"+
+								
+								".bottom{</br>"+
+									
+									indent(2)+"bottom: 0;</br>"+
+
+								"}</br></br>"+
+
+
+								
+							 "</code>"
+},
+
+{programming_concept_name: "left", 
+programming_concept_category: categories[8].category_name,
+programming_concept_type: type.defintion,
+programming_concept_date: updated_dates.updated_date_1,
+programming_concept_definition: "This css style positions the element at the left of a web page",
+programming_concept_example: "<code>"+
+								wrapText("html",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+									
+										indent(2) + wrapText("head",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+											indent(4)+"...</br></br>"+
+										indent(2) + wrapText("head",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + wrapText("div class = "+wrapText("left",opening_double_quote,closing_double_quote),opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+												indent(6)+"Set element to the left.</br></br>"+
+											indent(4) + wrapText("div",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+										
+										
+										
+								wrapText("html",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+								
+								"<u>CSS File</u></br></br>"+
+								
+								".left{</br>"+
+									
+									indent(2)+"left: 0;</br>"+
+
+								"}</br></br>"+
+
+
+								
+							 "</code>"
+},
+
+{programming_concept_name: "right", 
+programming_concept_category: categories[8].category_name,
+programming_concept_type: type.defintion,
+programming_concept_date: updated_dates.updated_date_1,
+programming_concept_definition: "This css style positions the element at the right of a web page",
+programming_concept_example: "<code>"+
+								wrapText("html",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+									
+										indent(2) + wrapText("head",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+											indent(4)+"...</br></br>"+
+										indent(2) + wrapText("head",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+
+											indent(4) + wrapText("div class = "+wrapText("right",opening_double_quote,closing_double_quote),opening_angle_bracket,closing_angle_bracket_1)+"</br></br>"+
+												indent(6)+"Set element to the right.</br></br>"+
+											indent(4) + wrapText("div",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+										indent(2) + wrapText("body",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+										
+										
+										
+								wrapText("html",opening_angle_bracket_1,closing_angle_bracket_1)+"</br></br>"+
+
+								
+								"<u>CSS File</u></br></br>"+
+								
+								".right{</br>"+
+									
+									indent(2)+"right: 0;</br>"+
+
+								"}</br></br>"+
+
 
 								
 							 "</code>"
@@ -1739,6 +2307,20 @@ programming_concept_definition: "Defines a specific action that can be performed
 programming_concept_example: "<code>"+
 								"public int functionName(/*You can choose to have parameters */) {</br></br>"+
 								indent(2)+"//define the action here;</br></br>"+
+								"}</br>"+
+							 "</code>"
+},
+{programming_concept_name: "recursive function", 
+programming_concept_category: categories[9].category_name,
+programming_concept_type: type.defintion,
+programming_concept_date: updated_dates.updated_date_1,
+programming_concept_definition: "This type of function calls itself continuously until it reaches a base case. The base case is the value that allows for the function to stop calling itself.",
+programming_concept_example: "<code>"+
+								"recursiveFunctionName(/* parameters here */) {</br></br>"+
+									indent(2)+"if(base case is reached){</br>"+
+										indent(4)+"stop recursive function</br>"+
+									indent(2)+"}</br></br>"+
+									indent(2)+"recursiveFunctionName(/* parameters here */);</br>"+
 								"}</br>"+
 							 "</code>"
 },

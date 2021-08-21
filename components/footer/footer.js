@@ -30,7 +30,7 @@ function setupFooter(footer_id,tab_id){
                                                             "</div>"+
                                                          "</div>"+
                                                       "</div>"+
-                                                      "<div class = 'footer_container_company_name'><img src = '"+getImageDir(dir)+image_sources.website_logo+"'</div>"+
+                                                      "<div class = 'footer_container_company_name'><img src = '"+getImageDir(dir)+image_sources.website_icon+"'</div>"+
                                                       "<div class = 'footer_container_company_name'>companyname@domain.com</div>"+
                                                       "<div class = 'footer_container_company_name'>&copy; 2021 Company Name</div>"+
                                                    "</div>";

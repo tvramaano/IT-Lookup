@@ -75,7 +75,7 @@ function populate_programming_concepts(search_flag,sort_criteria){
 					
 				}
 			}
-		
+			window.scrollTo({ top: 0, behavior: 'smooth' });
 			document.getElementById(PROGRAMMING_CONTENT_ID).innerHTML = programming_content_container;
 		}
 		break;

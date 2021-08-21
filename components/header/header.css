@@ -10,7 +10,7 @@
 .header_container_empty h3{
     margin: 0;
     padding: 1%;
-    font-family: Ravie,Arial;
+    font-family: Arial;
     color: var(--light_color);
     width: 48%;
     float: left;

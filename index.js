@@ -114,19 +114,21 @@ function goToPage(page_index,dir){
     window.location.href = dir + "" + page_setup_parameters[page_index].page_url;
 }
 
+function f(){
+    console.log("Hello");
+}
+
 
 // go to page
-function getPageName(page_index,page_id){
-   document.getElementById(page_id).innerHTML = page_setup_parameters[page_index].page_name;
+function getPageName(page_index){
+   return page_setup_parameters[page_index].page_name;
 }
 
-function count_web_items(){
-	document.getElementById("count_programming_concepts").innerHTML = programming_concepts.length;
-    document.getElementById("count_compare_code_concepts").innerHTML = code_comparison_parameters.length;
-}
+
 
 function startup_index(){
+    navigation_modal('close','subscription_box_mobile');
     setupPage(page_index.index);
-    count_web_items();
+    
 }
 

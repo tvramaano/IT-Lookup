@@ -1,0 +1,112 @@
+.card_container{
+    width: 46%;
+    margin: 8px;
+    float: left;
+    border-radius: 10px;
+    background-color: var(--light_color);
+    height: 250px;
+}
+
+.card_container_img{
+    width: 32%;
+    float: left;
+    padding: 8px;
+    height: 234px;
+    background-image: url(../../images/website_component_bakground.png);
+    border-radius: 8px;
+}
+
+.card_container_img img{
+    width: 100%;
+    background-color: var(--light_color);
+    padding: 10%;
+    border-radius: 120px;
+}
+
+.card_container_info{
+    width: 56%;
+    float: left;
+    padding: 1%;
+}
+
+.card_container_info_section{
+    width: 100%;
+    float: left;
+    color: var(--dark_blue);
+    height: 90px;
+    text-align: center;
+    padding-left: 2%;
+    font-weight: 600;
+}
+
+
+.card_container_info_section{
+    font-size: 13px;
+}
+
+.card_container_info_section h2{
+    margin-bottom: 0;
+}
+
+.card_container_info button{
+    width: 95%;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    border-radius: 10px;
+    background-color: var(--dark_blue);
+    background-image: url(../../images/website_component_bakground.png);
+    border: 2px solid var(--light_color);
+    color: var(--light_color);
+    font-weight: 600;
+}
+
+.card_container_info button:hover{
+    cursor: pointer;
+    color: var(--light_blue);
+    border: 2px solid var(--light_blue);
+}
+
+
+@media screen and (max-width: 1023px) {
+    .card_container_info_section h2{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .card_container{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        height: 250px;
+    }
+
+    
+}
+
+@media screen and (max-width: 500px) {
+    .card_container{
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    
+}
+
+@media screen and (max-width: 370px) {
+    .card_container{
+        height: 300px;
+    }
+
+    .card_container_img{
+        height: 284px;
+    }
+    
+    .card_container_info_section{
+       height: 120px;
+    }
+    
+}
