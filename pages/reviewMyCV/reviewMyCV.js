@@ -1,0 +1,1 @@
+setupPage(page_index.review_my_cv);

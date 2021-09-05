@@ -4,8 +4,10 @@ const page_index = {
                     privacy_policy: 2, 
                     about: 3,
                     programming_concepts: 4, 
-                    code_compare: 5, 
-                    prepare_my_career: 6,
+                    review_my_code: 5,
+                    review_my_cv: 6,  
+                    code_templates: 7,
+                    faq: 8,
                 };
 
 const page_setup_parameters = [
@@ -13,7 +15,8 @@ const page_setup_parameters = [
         icon_id: "web_icon_id",
         icon_source: image_sources.website_icon,
         page_id: "page_title_id",
-        page_name: "Hello World",
+        page_name: "Hello World Code",
+        page_description: "This is the home page of Hello World Code",
         tab_id: "hello_world_id",
         page_url: "index.html"
     },
@@ -22,6 +25,7 @@ const page_setup_parameters = [
         icon_source: "../../"+image_sources.website_icon,
         page_id: "page_title_id",
         page_name: "Terms and Conditions",
+        page_description: "Familiarise yourself with our terms and conditions.",
         tab_id: "terms_and_conditions_id",
         page_url: "pages/termsAndConditions/termsAndConditions.html"
     },
@@ -30,6 +34,7 @@ const page_setup_parameters = [
         icon_source: "../../"+image_sources.website_icon,
         page_id: "page_title_id",
         page_name: "Privacy Policy",
+        page_description: "Familiarise yourself with our privacy policy.",
         tab_id: 'privacy_policy_id',
         page_url: "pages/privacyPolicy/privacyPolicy.html"
     },
@@ -37,7 +42,9 @@ const page_setup_parameters = [
         icon_id: "web_icon_id",
         icon_source: "../../"+image_sources.website_icon,
         page_id: "page_title_id",
-        page_name: "About",
+        page_name: "Know more about us",
+        page_description: "Get to know what Hello World Code is all about.",
+        tab_id: "about_page_id",
         tab_id: "about_id",
         page_url: "pages/about/about.html"
     },
@@ -45,7 +52,8 @@ const page_setup_parameters = [
         icon_id: "web_icon_id",
         icon_source: "../../"+image_sources.website_icon,
         page_id: "page_title_id",
-        page_name: "Programming Concepts",
+        page_name: "Browse programming concepts",
+        page_description: "Get access to a wide range of programming definitions that will supplement your learning.",
         tab_id: "programming_concepts_id",
         page_url: "pages/programmingConcepts/programmingConcepts.html"
     },
@@ -53,18 +61,41 @@ const page_setup_parameters = [
         icon_id: "web_icon_id",
         icon_source: "../../"+image_sources.website_icon,
         page_id: "page_title_id",
-        page_name: "Code Comparison",
-        tab_id: "code_comparison_id",
-        page_url: "pages/codeCompare/codeCompare.html"
+        page_name: "Review my code",
+        page_description: "The best way to learn programming is to dive head first into solving problems. Send us your code so that we can review and give you feedback. ",
+        tab_id: "review_my_code_id",
+        page_url: "pages/reviewMyCode/reviewMyCode.html"
     },
     {
         icon_id: "web_icon_id",
         icon_source: "../../"+image_sources.website_icon,
         page_id: "page_title_id",
-        page_name: "Prepare myself for a career in Information Technology",
-        tab_id: "prepare_my_career_id",
-        page_url: "pages/prepareMyCareer/prepareMyCareer.html"
+        page_name: "Review my CV in order to be job ready",
+        page_description: "We will help you prepare your CV so as to kick start your tech career.",
+        tab_id: "review_my_cv_id",
+        page_url: "pages/reviewMyCV/reviewMyCV.html"
     },
+    {
+        icon_id: "web_icon_id",
+        icon_source: "../../"+image_sources.website_icon,
+        page_id: "page_title_id",
+        page_name: "Hello World Code templates",
+        page_description: "Access Hello World Code templates for different programming languages to get you started on your dev.",
+        tab_id: "code_templates_tab_id",
+        page_url: "pages/codeTemplates/codeTemplates.html"
+    },
+    {
+        icon_id: "web_icon_id",
+        icon_source: "../../"+image_sources.website_icon,
+        page_id: "page_title_id",
+        page_name: "FAQ's",
+        page_description: "A list of questions you might have about programming",
+        tab_id: "faq_tab_id",
+        page_url: "pages/faq/faq.html"
+    }
+
+
+
 
 
 
@@ -114,10 +145,6 @@ function goToPage(page_index,dir){
     window.location.href = dir + "" + page_setup_parameters[page_index].page_url;
 }
 
-function f(){
-    console.log("Hello");
-}
-
 
 // go to page
 function getPageName(page_index){
@@ -126,9 +153,6 @@ function getPageName(page_index){
 
 
 
-function startup_index(){
-    navigation_modal('close','subscription_box_mobile');
-    setupPage(page_index.index);
-    
-}
+setupPage(page_index.index);
+
 

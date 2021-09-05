@@ -23,8 +23,6 @@
 	<script src ="components/header/header.js" type ="text/javascript"></script>
 	<script src ="components/navigation/navigation.js" type ="text/javascript"></script>
 	<script src ="components/card/card.js" type ="text/javascript"></script>
-	<script src ="pages/programmingConcepts/programming_definitions.js" type ="text/javascript"></script>
-	<script src ="pages/codeCompare/codeCompare.js" type ="text/javascript"></script>
 	
   
 </head>
@@ -35,42 +33,15 @@
 <div class = "home_page">
 	<div class = "home_page_header">
 		<div class = "home_page_header_section">
-			<img src = "images/website_icon.png" />
-			<h1> <code> < Hello World /> </code> </h1>
+			
+			<h1> <code>  Hello World Code </code> </h1>
 			<p>Our job is to solidify the fundamentals of programming in order for you to master the craft</p>
-			<button 
-				class = "mobile_button"
-				onclick="navigation_modal('open','subscription_box_mobile')"
-			>
-				Subscribe for updates
-			</button>
-		</div>
-		<div class = "home_page_header_section" id = "subscription_box_id">
-			<div class = 'subscription_box'>
-				<div class = "horizontal_line"></div>
-				<h3>Subscribe for updates</h3>
-				
-				<input type = 'text' placeholder = 'Email address' />
-				<button>
-					Subscribe
-				</button>
-				<p>By subscribing with us, we will be able to send you any updates that we may have done on the website as well as any notifications that we may have for you related to improving your programming skills</p>
-			 </div>
+			
+			<img src = "images/website_icon.png" />
 		</div>
 	</div>
-	<div id = "subscription_box_mobile" class = 'subscription_box hide'>
-		<div class = "horizontal_line"></div>
-		<h3>Subscribe for updates</h3>
-		
-		<input type = 'text' placeholder = 'Email address' />
-		<button>Subscribe</button>
-		<button
-			onclick="navigation_modal('close','subscription_box_mobile')"
-		>
-			close
-		</button>
-		<p>By subscribing with us, we will be able to send you any updates that we may have done on the website as well as any notifications that we may have for you related to improving your programming skills</p>
-	 </div>
+
+	
 	<div class = "home_page_container">
 		
 		<div class = "home_page_tabs_container">
@@ -79,33 +50,69 @@
 						openNavigation(
 								"programming_concepts_tab_id",
 								"<h2>"+getPageName(page_index.programming_concepts)+"<h2>",
-								"<p>Get access to " + programming_concepts.length +" programming definitions that will supplement your learning.</p>",
+								"<p>"+page_setup_parameters[page_index.programming_concepts].page_description+"</p>",
 								"images/programming_concepts_icon.png",
 								page_index.programming_concepts
 						 );
 			</script>
 	   </div>
 
-	   <div id = "code_compare_tab_id">
+	   <div id = "review_my_code_tab_id">
 			<script>
 						openNavigation(
-								"code_compare_tab_id",
-								"<h2>"+getPageName(page_index.code_compare)+"<h2>",
-								"<p>See how different concepts are implemented using different programming languages.</p>",
-								"images/code_compare_icon.png",
-								page_index.code_compare
+								"review_my_code_tab_id",
+								"<h2>"+getPageName(page_index.review_my_code)+"<h2>",
+								"<p>"+page_setup_parameters[page_index.review_my_code].page_description+"</p>",
+								"images/review_my_code_icon.png",
+								page_index.review_my_code
 						);
 			</script>
 		</div>
 
-		<div id = "prepare_my_career_tab_id">
+		<div id = "review_my_cv_tab_id">
 			<script>
 						openNavigation(
-								"prepare_my_career_tab_id",
-								"<h2>"+getPageName(page_index.prepare_my_career)+"<h2>",
-								"<p>We will help you prepare your CV so as to kick start your peogramming career.</p>",
+								"review_my_cv_tab_id",
+								"<h2>"+getPageName(page_index.review_my_cv)+"<h2>",
+								"<p>"+page_setup_parameters[page_index.review_my_cv].page_description+"</p>",
 								"images/career_prepare_icon.png",
-								page_index.prepare_my_career
+								page_index.review_my_cv
+						);
+			</script>
+		</div>
+
+		<div id = "code_templates_tab_id">
+			<script>
+						openNavigation(
+								"code_templates_tab_id",
+								"<h2>"+getPageName(page_index.code_templates)+"<h2>",
+								"<p>"+page_setup_parameters[page_index.code_templates].page_description+"</p>",
+								"images/code_templates_icon.png",
+								page_index.code_templates
+						);
+			</script>
+		</div>
+
+		<!-- <div id = "code_comparison_tab_id">
+			<script>
+						openNavigation(
+								"code_comparison_tab_id",
+								"<h2>"+getPageName(page_index.code_comparison)+"<h2>",
+								"<p>"+page_setup_parameters[page_index.code_comparison].page_description+"</p>",
+								"images/code_compare_icon.png",
+								page_index.code_comparison
+						);
+			</script>
+		</div> -->
+
+		<div id = "faq_tab_id">
+			<script>
+						openNavigation(
+								"faq_tab_id",
+								"<h2>"+getPageName(page_index.faq)+"<h2>",
+								"<p>"+page_setup_parameters[page_index.faq].page_description+"</p>",
+								"images/faq_icon.png",
+								page_index.faq
 						);
 			</script>
 		</div>
@@ -115,7 +122,7 @@
 						openNavigation(
 								"about_tab_id",
 								"<h2>"+getPageName(page_index.about)+"<h2>",
-								"<p>Get to know us a little bit more. We explain our vision and goals for the company and get to know the team behind Hello World</p>",
+								"<p>"+page_setup_parameters[page_index.about].page_description+"</p>",
 								"images/about_icon.png",
 								page_index.about
 						);
@@ -127,7 +134,7 @@
 						openNavigation(
 								"terms_and_conditions_tab_id",
 								"<h2>"+getPageName(page_index.terms_and_conditions)+"<h2>",
-								"<p>Familiarise yourself with our terms and conditions.</p>",
+								"<p>"+page_setup_parameters[page_index.terms_and_conditions].page_description+"</p>",
 								"images/terms_and_conditions_icon.png",
 								page_index.terms_and_conditions
 						);
@@ -139,7 +146,7 @@
 						openNavigation(
 								"privacy_policy_tab_id",
 								"<h2>"+getPageName(page_index.privacy_policy)+"<h2>",
-								"<p>Familiarise yourself with our privacy policy.</p>",
+								"<p>"+page_setup_parameters[page_index.privacy_policy].page_description+"</p>",
 								"images/privacy_policy_icon.png",
 								page_index.privacy_policy
 						);
@@ -161,8 +168,5 @@
 	
 </body>
 
-<script>
-	startup_index();
-</script>
 
 </html>

@@ -1,8 +1,24 @@
-#programming_content_id{
+#programming_content_id,#pagination_button_group_id{
     float: left;
 	width: 96%;
     margin-top: 40px;
     padding: 2%;
+}
+
+#pagination_button_group_id button{
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    font-weight: 600;
+    color: var(--dark_blue);
+    border: 2px solid var(--dark_blue);
+}
+
+#pagination_button_group_id button:hover{
+    color: var(--light_color);
+    background-color: var(--dark_blue);
+    border: 2px solid var(--dark_blue);
+    cursor: pointer;
 }
 
 
@@ -18,9 +34,9 @@
     padding-bottom: 0;
 	text-decoration: none;
 	text-align: left;
-    top: 12%;
+    top: 100px;
     position: fixed;
-    background-image: url(../../images/website_background.png);
+    background-color: var(--light_color);
 }
 
 .left_navigation_tab input{
@@ -33,7 +49,7 @@
 	width: 30%;
 	border: none;
 	border-bottom: 2px solid var(--dark_blue);
-    background-image: url(../../images/website_background.png);
+    background-color: var(--light_color);
 	color: var(--dark_blue);
 	font-weight: 600;
 	font-size: 18px;
@@ -107,12 +123,9 @@
 
 
 @media screen and (max-width: 700px) {
-    .left_navigation_tab{
-        top:12%;
-    }
-
+    
     #programming_content_id{
-        margin-top: 60px;
+        margin-top: 100px;
     }
 
 
@@ -128,10 +141,6 @@
 
    
 
-    #programming_content_id{
-        margin-top: 100px;
-    }
-
 }
 
 @media screen and (max-width: 300px) {
@@ -143,8 +152,6 @@
         width: 48%;
     }
 
-    .left_navigation_tab{
-        top:15%;
-    }
+    
 
 }

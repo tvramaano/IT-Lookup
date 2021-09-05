@@ -7,7 +7,7 @@ function openNavigation(card_id,tab_name,tab_description,tab_image_src,page_name
                                                             "</div>"+
 
                                                             "<div class = 'card_container_info'>"+
-                                                                "<div class = 'card_container_info_section'>"+tab_name+"</div>"+
+                                                                "<div class = 'card_container_info_section_header'>"+tab_name+"</div>"+
                                                                 
                                                                 "<div class = 'card_container_info_section'><code>"+tab_description+"</code></div>"+
                                                                 "<button onclick = 'goToPage("+page_name+",\"\")'>Explore</button>"+

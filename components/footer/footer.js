@@ -6,12 +6,15 @@ function setupFooter(footer_id,tab_id){
     }
     
     document.getElementById(footer_id).innerHTML = "<div class = 'footer_container'>"+
+                                                    "<div class = 'footer_container_company_logo'><img src = '"+getImageDir(dir)+image_sources.website_icon+"'</div>"+
                                                      "<div class = 'footer_container_tabs'>"+
                                                         "<div class = 'footer_section'>"+
                                                             "<h3>Menu</h3>"+
                                                             "<div class = 'footer_container_tabs_link'><a id = '"+page_setup_parameters[page_index.programming_concepts].tab_id+"_footer' href = '"+dir+page_setup_parameters[page_index.programming_concepts].page_url+"'>"+page_setup_parameters[page_index.programming_concepts].page_name+"</a></div>"+
-                                                            "<div class = 'footer_container_tabs_link'><a id = '"+page_setup_parameters[page_index.code_compare].tab_id+"_footer' href = '"+dir+page_setup_parameters[page_index.code_compare].page_url+"'>"+page_setup_parameters[page_index.code_compare].page_name+"</a></div>"+
-                                                            "<div class = 'footer_container_tabs_link'><a id = '"+page_setup_parameters[page_index.prepare_my_career].tab_id+"_footer' href = '"+dir+page_setup_parameters[page_index.prepare_my_career].page_url+"'>"+page_setup_parameters[page_index.prepare_my_career].page_name+"</a></div>"+
+                                                            "<div class = 'footer_container_tabs_link'><a id = '"+page_setup_parameters[page_index.review_my_code].tab_id+"_footer' href = '"+dir+page_setup_parameters[page_index.review_my_code].page_url+"'>"+page_setup_parameters[page_index.review_my_code].page_name+"</a></div>"+
+                                                            "<div class = 'footer_container_tabs_link'><a id = '"+page_setup_parameters[page_index.review_my_cv].tab_id+"_footer' href = '"+dir+page_setup_parameters[page_index.review_my_cv].page_url+"'>"+page_setup_parameters[page_index.review_my_cv].page_name+"</a></div>"+
+                                                            "<div class = 'footer_container_tabs_link'><a id = '"+page_setup_parameters[page_index.code_templates].tab_id+"_footer' href = '"+dir+page_setup_parameters[page_index.code_templates].page_url+"'>"+page_setup_parameters[page_index.code_templates].page_name+"</a></div>"+
+                                                            "<div class = 'footer_container_tabs_link'><a id = '"+page_setup_parameters[page_index.faq].tab_id+"_footer' href = '"+dir+page_setup_parameters[page_index.faq].page_url+"'>"+page_setup_parameters[page_index.faq].page_name+"</a></div>"+
 
                                                          "</div>"+
                                                          "<div class = 'footer_section'>"+
@@ -30,7 +33,7 @@ function setupFooter(footer_id,tab_id){
                                                             "</div>"+
                                                          "</div>"+
                                                       "</div>"+
-                                                      "<div class = 'footer_container_company_name'><img src = '"+getImageDir(dir)+image_sources.website_icon+"'</div>"+
+                                                     
                                                       "<div class = 'footer_container_company_name'>companyname@domain.com</div>"+
                                                       "<div class = 'footer_container_company_name'>&copy; 2021 Company Name</div>"+
                                                    "</div>";

@@ -1,9 +1,9 @@
 .card_container{
-    width: 46%;
+    width: 48%;
     margin: 8px;
     float: left;
     border-radius: 10px;
-    background-color: var(--light_color);
+    background-color: var(--lighter_grey);
     height: 250px;
 }
 
@@ -18,7 +18,7 @@
 
 .card_container_img img{
     width: 100%;
-    background-color: var(--light_color);
+    background-color: var(--lighter_grey);
     padding: 10%;
     border-radius: 120px;
 }
@@ -29,22 +29,23 @@
     padding: 1%;
 }
 
-.card_container_info_section{
+.card_container_info_section,.card_container_info_section_header{
     width: 100%;
     float: left;
     color: var(--dark_blue);
-    height: 90px;
+    height: 110px;
     text-align: center;
     padding-left: 2%;
     font-weight: 600;
-}
-
-
-.card_container_info_section{
     font-size: 13px;
 }
 
-.card_container_info_section h2{
+
+.card_container_info_section_header{
+    height: 70px;
+}
+
+.card_container_info_section_header h2{
     margin-bottom: 0;
 }
 
@@ -69,19 +70,34 @@
 }
 
 
+
 @media screen and (max-width: 1023px) {
-    .card_container_info_section h2{
+    .card_container{
+       height: 280px;
+       margin: 4px;
+    }
+    
+    .card_container_img{
+       height: 264px;
+    }
+    .card_container_info_section_header h2{
         font-size: 16px;
     }
+
+    .card_container_info_section{
+         height: 140px;
+    }
+
+    
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 770px) {
     .card_container{
         width: 80%;
         margin-left: 10%;
         margin-right: 10%;
-        height: 250px;
     }
+
 
     
 }
@@ -96,17 +112,21 @@
     
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 360px) {
     .card_container{
-        height: 300px;
-    }
+        height: 310px;
+     }
 
     .card_container_img{
-        height: 284px;
-    }
-    
-    .card_container_info_section{
-       height: 120px;
-    }
+        height: 294px;
+     }
+     .card_container_info_section_header h2{
+         font-size: 16px;
+     }
+ 
+     .card_container_info_section{
+          height: 170px;
+     }
+ 
     
 }

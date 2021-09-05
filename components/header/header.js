@@ -10,7 +10,7 @@ function setupHeader(header_id,subHeading_content,dirImg){
                                                                 "<img onclick = 'navigation_modal(\"open\",\"navigation_id\")' src = '"+getImageDir(dirImg)+image_sources.menu_icon+"'/>"+
                                                                 "<img onclick = 'goToPage(page_index.index,\""+dir+"\")' src = '"+getImageDir(dirImg)+image_sources.home_icon+"'/>"+
                                                             "</div>"+
-                                                            "<h3><code>< Hello World /></code></h3>"+
+                                                            "<h3><code> Hello World Code</code></h3>"+
                                                         "</div>"+
                                                         "<div class = 'subheader'><code>"+subHeading_content+"...</code></div>"+
                                                             

@@ -8,7 +8,7 @@ const image_sources = {
     about_icon: "images/about_icon.png",
     menu_icon: "images/menu_icon.png",
     browse_IT_careers_icon: "images/browse_IT_careers_icon.png",
-    code_compare_icon: "images/code_compare_icon.png",
+    review_my_code_icon: "images/review_my_code_icon.png",
     programming_concepts_icon: "images/programming_concepts_icon.png",
     career_prepare_icon: "images/career_prepare_icon.png",
     faq_icon: "images/faq_icon.png",

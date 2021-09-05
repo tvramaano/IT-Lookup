@@ -2,6 +2,8 @@ const PROGRAMMING_CONCEPT_INPUT_ID = "programming_concept_input";
 const PROGRAMMING_CONTENT_ID = "programming_content_id";
 const POPULATE_OPTIONS_CLASS = "populate_options_class";
 const POPULATE_VALUES_ID = "populated_values_id";
+const iTEMS_LIMIT = programming_concepts.length;
+let length_of_displayed_list = programming_concepts.length;
 
 
 
@@ -9,14 +11,18 @@ function page_startup(){
 	setupPage(page_index.programming_concepts);
     populate_categories_dropdown_list();
     get_list_of_concepts(document.getElementById(PROGRAMMING_CONCEPT_INPUT_ID), programming_concepts,POPULATE_VALUES_ID,POPULATE_OPTIONS_CLASS);
-    populate_programming_concepts(search_flags.search_all,document.getElementById(PROGRAMMING_CONCEPT_INPUT_ID).value);
+    
+	populate_programming_concepts(search_flags.search_all,document.getElementById(PROGRAMMING_CONCEPT_INPUT_ID).value);
+	
 }
 
 /* programming concepts view */
 
 function populate_programming_concepts(search_flag,sort_criteria){
+
 	let programming_content_container = "";
 	let programming_content_temp = "";
+	
 	
 	switch(search_flag){
 		case search_flags.search_all:{
@@ -26,8 +32,9 @@ function populate_programming_concepts(search_flag,sort_criteria){
 			programming_concept_sort(programming_concepts,sort_criteria);
 			if(category_name === "View all"){
 				
-				for(let i = 0 ; i < programming_concepts.length;i++){
+				for(let i = 0 ; i < iTEMS_LIMIT;i++){
 					
+				
 					programming_content_temp  = "<div class = 'programming_concept_tab'>";
 					programming_content_temp  += "<h3>"+programming_concepts[i].programming_concept_name + "</h3>";
 					programming_content_temp  += "<section class = 'left_navigation_tab_button_group'>";
@@ -50,9 +57,11 @@ function populate_programming_concepts(search_flag,sort_criteria){
 					
 				}
 			}
-			else{
-				for(let i = 0 ; i < programming_concepts.length;i++){
+			else{ 
+				
+				for(let i = 0 ; i < iTEMS_LIMIT;i++){
 					if(category_name === programming_concepts[i].programming_concept_category){
+						
 						programming_content_temp  = "<div class = 'programming_concept_tab'>";
 						programming_content_temp  += "<h3>"+programming_concepts[i].programming_concept_name + "</h3>";
 						programming_content_temp  += "<section class = 'left_navigation_tab_button_group'>";
@@ -74,6 +83,7 @@ function populate_programming_concepts(search_flag,sort_criteria){
 					}
 					
 				}
+				
 			}
 			window.scrollTo({ top: 0, behavior: 'smooth' });
 			document.getElementById(PROGRAMMING_CONTENT_ID).innerHTML = programming_content_container;
@@ -122,6 +132,8 @@ function populate_programming_concepts(search_flag,sort_criteria){
     }
 		break;
 	}
+
+	
 }
 
 function programming_concept_sort(arr_to_sort,sort_criteria){
@@ -184,5 +196,7 @@ function sort_by_selection(element_id,search_flag){
 	let selected_option = document.getElementById(element_id).value;
 	populate_programming_concepts(search_flag,selected_option);
 }
+
+
 
 

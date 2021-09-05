@@ -14,11 +14,11 @@
       <link rel="stylesheet" href="../../components/footer/footer.css"/>
       <link rel="stylesheet" href="../../components/header/header.css"/>
 	  <link rel="stylesheet" href="../../components/navigation/navigation.css"/>
-      <link rel="stylesheet" href="codeCompare.css"/>
+      <link rel="stylesheet" href="faq.css"/>
   
       <script src="../../images/imageSources.js" type="text/javascript"></script>
       <script src="../../index.js" type="text/javascript"></script>
-      <script src="codeCompare.js" type="text/javascript"></script>
+      <script src="faq.js" type="text/javascript"></script>
       <script src = "../../components/footer/footer.js"></script>
       <script src = "../../components/header/header.js"></script>
 	  <script src = "../../components/navigation/navigation.js"></script>
@@ -32,7 +32,7 @@
 <div id = "header_id">
 	<script>setupHeader(
 						"header_id",
-						"Compare code concepts",
+						page_setup_parameters[page_index.faq].page_name,
 						"../../"
 						)
 	</script>
@@ -42,38 +42,21 @@
 	<script>
 		openNavigation(
 			"navigation_id",
-			page_setup_parameters[page_index.code_compare].tab_id
+			page_setup_parameters[page_index.faq].tab_id
 		)
 	</script>
 </div>
 
 <div onclick=" navigation_modal('close','navigation_id')" class = "content_area">
-		
-		
-	<div class = "code_compare_container">
-		<section class = "code_compare_container_header">Compare code concepts by selecting from the different languages and see how the same concept is done using different languages.</section>
-			<section class = "code_compare_container_header">
-				
-				<select onclick="toggleCodeComparison()" id = "code_compare_id"></select>
-				<select onclick="toggleCodeComparison()" id = "code_compare_language_id"></select>
-				<div onclick = "toggleMode()" id = "code_compare_mode_id"><img id = "code_compare_mode_img_id" src = ""/></div>
-				
-			</section> 
 
-			<section  id = "code_compare_container_body"></section>
-			<section  id = "code_compare_container_output"></section>
-	</div>
-	
-
-	<section id = "compare_comparison_id"></section>
-
-</div>	
+</div>
 	
 <!--footer-->
 <div id = "footer_id">
-	<script>setupFooter(
+	<script>
+		setupFooter(
 			"footer_id",
-			page_setup_parameters[page_index.code_compare].tab_id
+			page_setup_parameters[page_index.faq].tab_id
 		)
 	</script>
 </div>	
@@ -81,8 +64,5 @@
 	
 </body>
 
-<script>
-	startupCodeCompare();
-</script>
 
 </html>
