@@ -1,14 +1,7 @@
 const page_index = {
-                    index: 0,
-                    terms_and_conditions: 1, 
-                    privacy_policy: 2, 
-                    about: 3,
-                    programming_concepts: 4, 
-                    review_my_code: 5,
-                    review_my_cv: 6,  
-                    code_templates: 7,
-                    faq: 8,
-                };
+                     index: 0,
+                     programming_concepts: 1, 
+                   };
 
 const page_setup_parameters = [
     {
@@ -20,34 +13,7 @@ const page_setup_parameters = [
         tab_id: "hello_world_id",
         page_url: "index.html"
     },
-    {
-        icon_id: "web_icon_id",
-        icon_source: "../../"+image_sources.website_icon,
-        page_id: "page_title_id",
-        page_name: "Terms and Conditions",
-        page_description: "Familiarise yourself with our terms and conditions.",
-        tab_id: "terms_and_conditions_id",
-        page_url: "pages/termsAndConditions/termsAndConditions.html"
-    },
-    {
-        icon_id: "web_icon_id",
-        icon_source: "../../"+image_sources.website_icon,
-        page_id: "page_title_id",
-        page_name: "Privacy Policy",
-        page_description: "Familiarise yourself with our privacy policy.",
-        tab_id: 'privacy_policy_id',
-        page_url: "pages/privacyPolicy/privacyPolicy.html"
-    },
-    {
-        icon_id: "web_icon_id",
-        icon_source: "../../"+image_sources.website_icon,
-        page_id: "page_title_id",
-        page_name: "Know more about us",
-        page_description: "Get to know what Hello World Code is all about.",
-        tab_id: "about_page_id",
-        tab_id: "about_id",
-        page_url: "pages/about/about.html"
-    },
+   
     {
         icon_id: "web_icon_id",
         icon_source: "../../"+image_sources.website_icon,
@@ -57,48 +23,7 @@ const page_setup_parameters = [
         tab_id: "programming_concepts_id",
         page_url: "pages/programmingConcepts/programmingConcepts.html"
     },
-    {
-        icon_id: "web_icon_id",
-        icon_source: "../../"+image_sources.website_icon,
-        page_id: "page_title_id",
-        page_name: "Review my code",
-        page_description: "The best way to learn programming is to dive head first into solving problems. Send us your code so that we can review and give you feedback. ",
-        tab_id: "review_my_code_id",
-        page_url: "pages/reviewMyCode/reviewMyCode.html"
-    },
-    {
-        icon_id: "web_icon_id",
-        icon_source: "../../"+image_sources.website_icon,
-        page_id: "page_title_id",
-        page_name: "Review my CV in order to be job ready",
-        page_description: "We will help you prepare your CV so as to kick start your tech career.",
-        tab_id: "review_my_cv_id",
-        page_url: "pages/reviewMyCV/reviewMyCV.html"
-    },
-    {
-        icon_id: "web_icon_id",
-        icon_source: "../../"+image_sources.website_icon,
-        page_id: "page_title_id",
-        page_name: "Hello World Code templates",
-        page_description: "Access Hello World Code templates for different programming languages to get you started on your dev.",
-        tab_id: "code_templates_tab_id",
-        page_url: "pages/codeTemplates/codeTemplates.html"
-    },
-    {
-        icon_id: "web_icon_id",
-        icon_source: "../../"+image_sources.website_icon,
-        page_id: "page_title_id",
-        page_name: "FAQ's",
-        page_description: "A list of questions you might have about programming",
-        tab_id: "faq_tab_id",
-        page_url: "pages/faq/faq.html"
-    }
-
-
-
-
-
-
+   
 ]
 
 const tab = "&nbsp;";

@@ -14,6 +14,9 @@ const image_sources = {
     faq_icon: "images/faq_icon.png",
     darkMode_icon: "images/darkMode.png",
     lightMode_icon: "images/lightMode.png",
+    about_us_template_mission: "images/about_us_template_mission.png",
+    about_us_template_what_we_do: "images/about_us_template_what_we_do.png",
+    about_us_template_purpose: "images/about_us_template_purpose.png",
    
 }
 

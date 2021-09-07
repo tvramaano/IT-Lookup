@@ -1,1 +1,0 @@
-setupPage(page_index.faq);

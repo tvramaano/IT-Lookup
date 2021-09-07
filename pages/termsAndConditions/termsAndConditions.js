@@ -1,1 +1,0 @@
-setupPage(page_index.terms_and_conditions);
