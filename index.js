@@ -1,29 +1,29 @@
 const page_index = {
-                     index: 0,
-                     programming_concepts: 1, 
+                     index_page: 0,
+                     request_a_word:1,
+                     pronounciation_settings_modal: 2
+                   };
+
+const showStatus = {
+                     show: "block",
+                     hide:"none"
                    };
 
 const page_setup_parameters = [
     {
-        icon_id: "web_icon_id",
-        icon_source: image_sources.website_icon,
-        page_id: "page_title_id",
-        page_name: "Hello World Code",
-        page_description: "This is the home page of Hello World Code",
-        tab_id: "hello_world_id",
-        page_url: "index.html"
+        page_name: "Browse Information Technology definitions",
+        page_id: "home_page_id"
+    },
+  
+    {
+        page_name: "Request an IT-related word that is not listed on our website",
+        page_id: "request_a_word_id"
     },
    
     {
-        icon_id: "web_icon_id",
-        icon_source: "../../"+image_sources.website_icon,
-        page_id: "page_title_id",
-        page_name: "Browse programming concepts",
-        page_description: "Get access to a wide range of programming definitions that will supplement your learning.",
-        tab_id: "programming_concepts_id",
-        page_url: "pages/programmingConcepts/programmingConcepts.html"
+        page_name: "Set your pronunciation settings",
+        page_id: "pronounciation_settings_id"
     },
-   
 ]
 
 const tab = "&nbsp;";
@@ -53,31 +53,64 @@ function indent(num_spaces){
 	return indentations;
 }
 
-function setupPage(page_name){
+function setupPage(page_index){
     // setup the page icon
     try{
-        document.getElementById(page_setup_parameters[page_name].icon_id).href = page_setup_parameters[page_name].icon_source;
         
-        document.getElementById(page_setup_parameters[page_name].page_id).innerHTML = page_setup_parameters[page_name].page_name
+        document.getElementById("web_icon_id").href = image_sources.website_icon;
+        document.getElementById("page_title_id").innerHTML = page_setup_parameters[page_index].page_name;
+        document.getElementById(page_setup_parameters[page_index].page_id).style.display = showStatus.show;
+        document.getElementById(page_setup_parameters[page_index].page_id).style.display = showStatus.show;
+       
+      
     }
     catch(error){
-       
     }
 }
 
-// go to page
-function goToPage(page_index,dir){
-    window.location.href = dir + "" + page_setup_parameters[page_index].page_url;
+function showExitIcon(shownStatus){
+    document.getElementById("exit_img_id").style.display = shownStatus;
+}
+
+function show_modal(showStatus_id,modal_id){
+   
+    switch(showStatus_id){
+        case showStatus.show:{
+            document.getElementById(modal_id).style.display = showStatus.show;
+
+            switch(modal_id){
+                case page_setup_parameters[page_index.request_a_word].page_id:{
+                    document.getElementById("body").style.overflowY = "hidden";
+                }break;
+            }
+        }break;
+
+        case showStatus.hide:{
+            document.getElementById(modal_id).style.display = showStatus.hide;
+            // document.getElementById("body").style.overflowY = "hidden";	
+            switch(modal_id){
+                case page_setup_parameters[page_index.pronounciation_settings_modal].page_id:{
+                    pronounciation_settings_values[settings_index.volume].value = document.getElementById("slider_voice_volume").value;
+                    pronounciation_settings_values[settings_index.speed].value = document.getElementById("slider_voice_speed").value;
+                    pronounciation_settings_values[settings_index.tone].value = document.getElementById("slider_voice_tone").value;
+                }break;
+
+                case page_setup_parameters[page_index.request_a_word].page_id:{
+                    document.getElementById("body").style.overflowY = "scroll";
+                }break;
+            }
+            // if(modal_id === page_setup_parameters[page_index.pronounciation_settings_modal].page_id){
+            //     pronounciation_settings_values[settings_index.volume].value = document.getElementById("slider_voice_volume").value;
+            //     pronounciation_settings_values[settings_index.speed].value = document.getElementById("slider_voice_speed").value;
+            //     pronounciation_settings_values[settings_index.tone].value = document.getElementById("slider_voice_tone").value;
+            // }
+            
+        }break;
+    }
 }
 
 
-// go to page
-function getPageName(page_index){
-   return page_setup_parameters[page_index].page_name;
-}
 
 
-
-setupPage(page_index.index);
 
 

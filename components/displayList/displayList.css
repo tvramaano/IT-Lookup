@@ -1,16 +1,9 @@
 /* dispay modal */
-.top_fixed{
-    top: 0;
-    position: fixed;
-    z-index: 30;
-    width: 100%;
-    float: left;
-    margin-bottom: 120px;
-}
 .definition_area{
     width: 100%;
     float: left;
-    margin-top: 150px;
+    margin-bottom: 70px;
+    margin-top: 100px;
 }
 #display_definition_modal_id{
 	top: 0;
@@ -18,12 +11,13 @@
 	left: 0;
 	right: 0;
 	position: fixed;
-	background-color: #fff;
+	background-color: var(--light_color);
 	width: 100vw;
 	height: 100vh;
 	z-index: 25;
 	overflow-y: scroll;
 	display: none;
+   
 }
 
 #display_definition_modal_header_id,#display_definition_modal_related_id h2{
@@ -66,7 +60,6 @@
 .display_definition_modal_section_header,.display_definition_modal_section_header_inner{
 	padding: 1%;
 	background-color: var(--dark_blue);
-	background-image: url(../../images/website_component_bakground.png);
 	color: var(--light_color);
 	border-radius: 10px;
 	width: 50%;
@@ -75,7 +68,6 @@
 .display_definition_modal_empty{
 	height: 100px;
 	width: 100%;
-	background-image: url(../../images/website_component_bakground.png);
 }
 
 .display_definition_modal_section_header{
@@ -107,28 +99,43 @@
 	font-family: 'Goudy Stout';
 }
 
-
 /**Autocomplete component*/
 
 .populate_options_class {
-    position: absolute;
+    position: fixed;
     border-bottom: none;
     border-top: none;
     z-index: 99;
-    top: 13vh;
-    height: 85vh;
+    top: 52vh;
+    height: 50vh;
     overflow-y: scroll;
     left: 0;
     right: 0;
     background-color: var(--light_color);
 }
+
 .populate_options_class div {
     padding: 10px;
     background-color: var(--light_color);
 }
+
 .populate_options_class div:hover {
     background-color: var(--light_color_accent);
     cursor: pointer;
+}
+
+@media screen and (max-width: 950px) {
+    .populate_options_class {
+        top: 50vh;
+        height: 45vh;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .populate_options_class {
+        top: 48vh;
+        height: 45vh;
+    }
 }
 
 
@@ -169,5 +176,41 @@
         font-size: 20px;
     }
 
+    
+
 
 }
+
+@media screen and (max-width: 680px) {
+    .populate_options_class {
+         top: 40vh;
+        height: 55vh; 
+    }
+
+}
+
+@media screen and (max-width: 523px) {
+    .populate_options_class {
+         top: 43vh;
+        height: 52vh; 
+    }
+
+}
+
+@media screen and (max-width: 490px) {
+    .populate_options_class {
+        top: 43vh;
+        height: 55vh;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .populate_options_class {
+        top: 42vh;
+        height: 53vh;
+    }
+
+}
+  
+  

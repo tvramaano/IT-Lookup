@@ -1,0 +1,152 @@
+.pronounciation_settings_container{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    float: left;
+    margin-top: 10%;
+    border: 2px solid var(--dark_blue);
+    background-color: var(--light_color);
+    
+}
+
+.pronounciation_settings_header{
+    width: 76%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: -5%;
+    padding: 2%;
+    padding-bottom: 4%;
+    border-radius: 10px;
+    background-color: var(--dark_blue);
+    color: var(--light_color);
+    text-align: center;
+}
+
+.pronounciation_settings_footer{
+    width: 98.01%;
+    float: left;
+    padding: 1%;
+    background-color: var(--dark_blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pronounciation_settings_img{
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.pronounciation_settings_img img{
+    width: 80px;
+    height: 80px;
+    margin-top: -30px;
+}
+
+.pronounciation_settings_footer button{
+    width: 40%;
+    background-color: var(--light_color);
+    margin: 1%;
+    padding: 1%;
+    text-align: center;
+    color: var(--dark_blue);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.pronounciation_settings_footer button:hover{
+    background-color: var(--dark_blue);
+    color: var(--light_color);
+    cursor: pointer;
+    border: 1px solid var(--light_color);
+}
+
+.pronounciation_settings_overlay{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background-color: rgba(50,50,50,0.9);
+   
+}
+
+.pronounciation_settings_section{
+    width: 40%;
+    margin: 2%;
+    float: left;
+    color: var(--dark_blue);
+    font-weight: 600;
+}
+
+.pronounciation_settings_section_text{
+    width: 20px;
+    height: 20px;
+    margin: 2%;
+    float: left;
+    color: var(--dark_blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pronounciation_settings_section_text input{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+@media screen and (max-width: 769px) {
+
+    .pronounciation_settings_container{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .pronounciation_settings_container{
+        width: 90%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+
+
+
+
+@media screen and (max-width: 320px) {
+    .pronounciation_settings_header{
+        font-size: 10px;
+    }
+
+    .pronounciation_settings_img img{
+        width: 50px;
+        height: 50px;
+        margin-top: -20px;
+    }
+
+    .pronounciation_settings_section{
+        width: 46%;
+    }
+
+    .pronounciation_settings_section_text{
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
+        margin-bottom: 20px;
+    }
+    
+  
+}
+
+
+
+

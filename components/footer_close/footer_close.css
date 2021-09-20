@@ -1,0 +1,28 @@
+.footer_close_container{
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_close_container button{
+    text-align: center;
+    width: 40%;
+    border-radius: 5px;
+    background-color: var(--dark_grey_accent);
+    color: var(--light_color);
+    padding: 1%;
+    margin: 1%;
+    font-size: 20px;
+}
+
+.footer_close_container button:hover{
+    color: var(--light_blue);
+    border: 1px solid var(--light_blue);
+    cursor: pointer;
+}
+
+

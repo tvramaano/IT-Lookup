@@ -33,33 +33,44 @@ function display_modal(open_status,header_info,date_info,category_info,definitio
 	}
 }
 
-function definitionVault(page_id,display_header_label){
+function definitionVault(page_id){
+    
     document.getElementById(page_id).innerHTML = "<section id = 'display_definition_modal_id'>"+
-                                                        "<section class = 'top_fixed'>"+
+                                                        "<section>"+
+                                                        createHeader(isReturned =false)+
+                                                           
                                                         
-                                                            "<section class = 'display_definition_modal_empty'></section>"+
-                                                            "<section class = 'display_definition_modal_section' id = 'display_definition_modal_nav_id'>"+
-                                                                "<section class = 'display_definition_modal_section_header'>"+
-                                                                    "<section class = 'display_definition_modal_section_header_inner'>"+
-                                                                        "<h2>"+display_header_label+"</h2>"+
-                                                                        "<span onclick = 'display_modal(\"close_status_id\")'>Close</span>"+
-                                                                    "</section>"+
-                                                                "</section>"+
-                                                            "</section>"+
-                                                        "</section>"+
+                                                        //     "<section class = 'display_definition_modal_empty'></section>"+
+                                                        //     "<section class = 'display_definition_modal_section' id = 'display_definition_modal_nav_id'>"+
+                                                        //         "<section class = 'display_definition_modal_section_header'>"+
+                                                        //             "<section class = 'display_definition_modal_section_header_inner'>"+
+                                                        //                 "<h2>"+display_header_label+"</h2>"+
+                                                        //                 "<span onclick = 'display_modal(\"close_status_id\")'>Close</span>"+
+                                                        //             "</section>"+
+                                                        //         "</section>"+
+                                                        //     "</section>"+
+                                                         "</section>"+
                                                         "<section class = 'definition_area'>"+
-                                                        "<section class = 'display_definition_modal_section' id = 'display_definition_modal_header_id'><h1>Header</h1></section>"+
-                                                        "<section class = 'display_definition_modal_section' id = 'display_definition_modal_date_id'>[date]</section>"+
-                                                        "<section class = 'display_definition_modal_section' id = 'display_definition_modal_category_id'><h2>[category]</h2></section>"+
-                                                        "<section class = 'display_definition_modal_section' id = 'display_definition_modal_definition_id'>Definition</section>"+
-                                                        "<section class = 'display_definition_modal_section' id = 'display_definition_modal_related_id'>Related Content</section>"+
-                                                    "</section>"+
+                                                             "<section class = 'display_definition_modal_section' id = 'display_definition_modal_header_id'><h1>Header</h1></section>"+
+                                                             "<section class = 'display_definition_modal_section' id = 'display_definition_modal_date_id'>[date]</section>"+
+                                                              "<section class = 'display_definition_modal_section' id = 'display_definition_modal_category_id'><h2>[category]</h2></section>"+
+                                                              "<section class = 'display_definition_modal_section' id = 'display_definition_modal_definition_id'>Definition</section>"+
+                                                              "<section class = 'display_definition_modal_section' id = 'display_definition_modal_related_id'>Related Content</section>"+
+                                                        "</section>"+
+                                                        createFooterClose()+
                                                 "</section>";
 }
 
+
+
 function get_list_of_concepts(search_concept_box, list_of_options,popValues,popOptions) {
     search_concept_box.addEventListener(html_elements.input_element, function(e) {
-        
+    if(search_concept_box.value === ""){
+        document.getElementById("body").style.overflowY = "scroll";
+    }
+    else{
+       document.getElementById("body").style.overflowY = "hidden";
+   }	
         // define variables
         let dynamic_div_element_1
         let dynamic_div_element_2
