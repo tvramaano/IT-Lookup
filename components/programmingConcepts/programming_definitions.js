@@ -1,11 +1,51 @@
-const categories = [{category_name: "View all"},{category_name: "Data type"},{category_name: "Variable identifier"},{category_name: "Access modifier"},{category_name: "Conditions"},{category_name: "Loops"},{category_name: "Web development"},{category_name: "HTML tags"},{category_name: "CSS"},{category_name: "Functions"},{category_name: "Programming Languages"},{category_name: "Object orientation"}];
-const type = {template: "template", defintion: "definition"};
-const programming_concepts_headers = {concept_name: "Sort by: name", concept_category: "Sort by: default"};
-const updated_dates = {updated_date_1: "Latest update: 25 July 2021"}
+const category_index = {
+							view_all: 0,
+							data_type: 1,
+							variable_identifier: 2,
+							access_modifier: 3,
+							conditions: 4,
+							loops: 5,
+							web_development: 6,
+							html_tags: 7,
+							css: 8,
+							functions: 9,
+							programming_languages: 10,
+							object_orientation: 11,
+							http_status_codes: 12
+					   }
+
+const categories = [
+					{category_name: "View all"},
+					{category_name: "Data type"},
+					{category_name: "Variable identifier"},
+					{category_name: "Access modifier"},
+					{category_name: "Conditions"},
+					{category_name: "Loops"},
+					{category_name: "Web development"},
+					{category_name: "HTML tags"},
+					{category_name: "CSS"},
+					{category_name: "Functions"},
+					{category_name: "Programming Languages"},
+					{category_name: "Object orientation"},
+					{category_name: "HTTP Status codes"}
+				];
+
+const type = {
+				template: "template", 
+				defintion: "definition"
+			 };
+const programming_concepts_headers = {
+										concept_name: "Sort by: name", 
+										concept_category: "Sort by: default"
+									};
+
+const updated_dates = {
+						updated_date_1: "Latest update: 25 July 2021"
+					  }
 
 var programming_concepts = [
 {programming_concept_name: "byte", 
-programming_concept_category: categories[1].category_name,
+programming_concept_category: categories[category_index.data_type].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Data type used for storing both negative and positive numerical non-decimal values [stored as 1 byte].",
@@ -14,7 +54,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "integer", 
-programming_concept_category: categories[1].category_name,
+programming_concept_category: categories[category_index.data_type].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Data type used for storing both negative and positive numerical non-decimal values [stored as 2 bytes].",
@@ -23,7 +63,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "double", 
-programming_concept_category: categories[1].category_name,
+programming_concept_category: categories[category_index.data_type].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Data type used for storing both negative and positive numerical decimal values [stored as 8 bytes].",
@@ -32,7 +72,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "float", 
-programming_concept_category: categories[1].category_name,
+programming_concept_category: categories[category_index.data_type].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Data type used for storing both negative and positive numerical decimal values [stored as 4 bytes].",
@@ -41,7 +81,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "boolean", 
-programming_concept_category: categories[1].category_name,
+programming_concept_category: categories[category_index.data_type].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Data type used for storing either true or false.",
@@ -50,7 +90,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "short", 
-programming_concept_category: categories[1].category_name,
+programming_concept_category: categories[category_index.data_type].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Data type used for storing both negative and positive numerical non-decimal values [stored as 2 bytes].",
@@ -59,7 +99,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "long", 
-programming_concept_category: categories[1].category_name,
+programming_concept_category: categories[category_index.data_type].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Data type used for storing both negative and positive numerical decimal values [stored as 4 bytes].",
@@ -69,7 +109,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "string", 
-programming_concept_category: categories[1].category_name,
+programming_concept_category: categories[category_index.data_type].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Data type used for storing a collection of characters.",
@@ -79,7 +119,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "char", 
-programming_concept_category: categories[1].category_name,
+programming_concept_category: categories[category_index.data_type].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Data type used for storing a single character.",
@@ -89,14 +129,14 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "variable", 
-programming_concept_category: categories[2].category_name,
+programming_concept_category: categories[category_index.variable_identifier].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "A small memory box that can store a value",
 programming_concept_example: "int variable_name = value_of_variable;"
 },
 {programming_concept_name: "constant", 
-programming_concept_category: categories[2].category_name,
+programming_concept_category: categories[category_index.variable_identifier].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Once the value is set, it can no longer be changed",
@@ -105,7 +145,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "static variable", 
-programming_concept_category: categories[2].category_name,
+programming_concept_category: categories[category_index.variable_identifier].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "A class variable belonging to the class and not the instance of the class. Exists for the entire duration of the program.",
@@ -118,7 +158,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "global variable", 
-programming_concept_category: categories[2].category_name,
+programming_concept_category: categories[category_index.variable_identifier].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "A variable that is declared and/or initialised at the beginning of your program/file. The scope of the variable is the entire program/file.",
@@ -127,7 +167,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "local variable", 
-programming_concept_category: categories[2].category_name,
+programming_concept_category: categories[category_index.variable_identifier].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "A variable that is declared within a block of code in the program/file. The scope of the variable is limited only within the block of code where it was declared.",
@@ -139,7 +179,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "public", 
-programming_concept_category: categories[3].category_name,
+programming_concept_category: categories[category_index.access_modifier].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Members can be accessed throughout the entire project",
@@ -152,7 +192,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "private", 
-programming_concept_category: categories[3].category_name,
+programming_concept_category: categories[category_index.access_modifier].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Members can be accessed only within the class",
@@ -165,7 +205,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "protected", 
-programming_concept_category: categories[3].category_name,
+programming_concept_category: categories[category_index.access_modifier].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Members can be accessed only within the same package/namespace",
@@ -179,7 +219,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "if-else statement", 
-programming_concept_category: categories[4].category_name,
+programming_concept_category: categories[category_index.conditions].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Used to execute an operation only when a condition evaluates to true. When the condition evaluates to false, then the operation stated on the else statment is executed.",
@@ -194,7 +234,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "if statement", 
-programming_concept_category: categories[4].category_name,
+programming_concept_category: categories[category_index.conditions].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Used to execute an operation only when a condition evaluates to true",
@@ -206,7 +246,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "else if statement", 
-programming_concept_category: categories[4].category_name,
+programming_concept_category: categories[category_index.conditions].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Used to execute an operation only when the condition evaluates to true. Specified after an if statement and before a (single) else statment (if it exists). There can exist more than one else if statement but there can only be one else statement.",
@@ -221,7 +261,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "tenary operator (? :)", 
-programming_concept_category: categories[4].category_name,
+programming_concept_category: categories[category_index.conditions].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This is the short hand for an if else statement using ? and : On the left of ?, we specify the condition to be evaluated.On the right of ?, we specify the operation to be executed when the condition evaluates to true. On the right of :, we specify the condition to be executed when the condition evaluates to false.",
@@ -230,7 +270,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "switch-case statement", 
-programming_concept_category: categories[4].category_name,
+programming_concept_category: categories[category_index.conditions].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This is the equivalent of having a lot of else if statements. We start with the switch statment in which has the parameter to be evaluated. After the switch statment, we have a bunch of case statements which represents different values that the parameter can evaluate to. If the parameter does not equal any of the values stated in the case statements then we execute the default statement which is specified after the last case statement.",
@@ -252,10 +292,10 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "while loop", 
-programming_concept_category: categories[5].category_name,
+programming_concept_category: categories[category_index.loops].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
-programming_concept_definition: "Execute an operation as long as the condition stated in the while evaluates to true. With while loops, it is a good idea to place a stop value so that the operation is executed up until the stop value is reached otherwise the while loop will execute infinitely causing the program to crash.",
+programming_concept_definition: "Execute an operation as long as the condition stated in the while evaluates to true. With while category_index.loops, it is a good idea to place a stop value so that the operation is executed up until the stop value is reached otherwise the while loop will execute infinitely causing the program to crash.",
 programming_concept_example: "<code>"+
 								"int a = 6;</br></br>"+
 								"while(a < 10){</br>"+
@@ -264,7 +304,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "do while", 
-programming_concept_category: categories[5].category_name,
+programming_concept_category: categories[category_index.loops].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Execute the operation specified in the do block as long as the condition stated in the while evaluates to true. Unlike in a normal while loop, the first iteration of the do statement will always be executed no matter the condition stated in the while",
@@ -277,7 +317,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "for loop", 
-programming_concept_category: categories[5].category_name,
+programming_concept_category: categories[category_index.loops].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Execute an operation a certain number of times.",
@@ -290,10 +330,10 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "nested for loop", 
-programming_concept_category: categories[5].category_name,
+programming_concept_category: categories[category_index.loops].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
-programming_concept_definition: "Having a number of for loops contained inside one for loop. This is used mainly when executing operations on multi-dimensional objects.",
+programming_concept_definition: "Having a number of for category_index.loops contained inside one for loop. This is used mainly when executing operations on multi-dimensional objects.",
 programming_concept_example: "<code>"+
 								"int a[][] = new int[10][10];</br></br>"+
 								"for(int i = 0; i < 10; i++){</br>"+
@@ -304,7 +344,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "for each loop", 
-programming_concept_category: categories[5].category_name,
+programming_concept_category: categories[category_index.loops].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Execute the operation for each item contained in a collection.",
@@ -316,7 +356,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "html", 
-programming_concept_category: categories[6].category_name,
+programming_concept_category: categories[category_index.web_development].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Hyper Text Markup Language. This is the standard markup language that is used to create web pages. These web pages can also be styled using CSS (Cascading Style Sheet) and can have scripting applied to it using Javascript.",
@@ -331,7 +371,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "css", 
-programming_concept_category: categories[6].category_name,
+programming_concept_category: categories[category_index.web_development].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Cascading Style Sheet. This is used to style HTML pages.",
@@ -344,7 +384,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "react", 
-programming_concept_category: categories[6].category_name,
+programming_concept_category: categories[category_index.web_development].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Also referred to as React JS. This is an open source front end javascript library used to build web applications.",
@@ -361,7 +401,7 @@ programming_concept_example:  "<code>"+
 },
 
 {programming_concept_name: "angular", 
-programming_concept_category: categories[6].category_name,
+programming_concept_category: categories[category_index.web_development].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Also referred to as Angular JS. This is an open source javascript framework used to build front end single-page web applications.",
@@ -370,21 +410,21 @@ programming_concept_example: "<code>"+
 							  "</code>"
 },
 {programming_concept_name: "web hosting", 
-programming_concept_category: categories[6].category_name,
+programming_concept_category: categories[category_index.web_development].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Storing your web pages on a server so that they can be displayed on a browser.",
 programming_concept_example: "The domain codex.com is hosted by this hosting company"
 },
 {programming_concept_name: "domain name", 
-programming_concept_category: categories[6].category_name,
+programming_concept_category: categories[category_index.web_development].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This is the name used when accessing a website on a web browser.",
 programming_concept_example: "codex.com"
 },
 {programming_concept_name: "url", 
-programming_concept_category: categories[6].category_name,
+programming_concept_category: categories[category_index.web_development].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Uniform Resource Locator. This is the address of the website you want access to.",
@@ -392,7 +432,7 @@ programming_concept_example: "www.codex.com"
 },
 
 {programming_concept_name: "br", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "HTML tag that represents a new line.",
@@ -417,7 +457,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "head", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "HTML tag that allows you to set the web page title; icon; links to external javascript files and links to external css files",
@@ -444,7 +484,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "body", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This HTML tag is where you put everything that is required to design a web page",
@@ -468,7 +508,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "p", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This HTML tag represents a paragraph",
@@ -494,7 +534,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "div", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This HTML tag is a division and used as a block element that wraps around images, texts and other web related content. We can apply a class or id to style the div block.",
@@ -520,7 +560,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "section", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This HTML tag represents a section in which is used to wrap around web related contnent for example: headings, paragraphs, images etc.",
@@ -546,7 +586,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "code", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This HTML tag is used for any code snippets that you would like to add into your website.",
@@ -572,7 +612,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "heading (h1,h2,h3,h4,h5,h6)", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This HTML tag is used to add a heading into your website. Each heading level (h1.h2,h3,h4,h5,h6) represents the size of the heading from largest (h1) to smallest (h6).",
@@ -618,7 +658,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "nav", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This HTML tag is used to represent that a navigation is to be created.",
@@ -654,7 +694,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "header", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This HTML tag is used to represent that a header is to be created at the top of the website.",
@@ -682,7 +722,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "footer", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This HTML tag is used to represent that a footer is to be created at the bottom of the website.",
@@ -710,7 +750,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "aside", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This HTML tag is used to represent that a side navigation is to be created on either the left or right side of a web page.",
@@ -744,7 +784,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "span", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This HTML tag is used as an inline element. We can use it to style section of text within a paragraph.",
@@ -771,7 +811,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "style", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This HTML tag is used to implement styling within the html file rather than using an external scc file. We use this html tag in the head.",
@@ -803,7 +843,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "script", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This HTML tag is used to embed javascript in an html file rather than using an external javascript file.",
@@ -829,7 +869,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "a", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This HTML tag is used to represent a link to another page/url",
@@ -855,7 +895,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "img", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This HTML tag is used to represent an image",
@@ -879,7 +919,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "video", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This HTML tag is used to represent a video",
@@ -903,7 +943,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "iframe", 
-programming_concept_category: categories[7].category_name,
+programming_concept_category: categories[category_index.html_tags].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This HTML tag is used to represent an area where one is able to view documents and images on a web page.",
@@ -929,7 +969,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "class", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "We can set a class to each HTML tag so as to apply styling to the content contained by the HTML tag and also apply scripting to the content. You can apply the same class name to different HTML tags.",
@@ -965,7 +1005,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "id", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "We can set an id to each HTML tag so as to apply styling to the content contained by the HTML tag and also apply scripting to the content. Important to note with ids as compared to a class is that ids are unique to each element.",
@@ -1005,7 +1045,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "color", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style is used to set the color of your text. You can set the color by stating the name of the color as follows: orange, red, blue, yellow etc. You can also set the color using rgb(value1,value2,value3) format. You can also set the color using the hexadecimal format (#FFF).",
@@ -1037,7 +1077,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "background-color", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style is used to set the background color of a container",
@@ -1071,7 +1111,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "width", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style is used to set how wide a container should be. You can set the width using px,vw and %.",
@@ -1104,7 +1144,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "height", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style is used to set how high a container should be. You can set the height using px,vh and %.",
@@ -1137,7 +1177,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "font-size", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style is used to set the size of the text in pixels (px)",
@@ -1168,7 +1208,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "font-weight", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style is used to set a bold property to the text",
@@ -1200,7 +1240,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "font-family", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style is used to set the font theme name of the text. You can set more than one font theme name where if your first choice font theme name is not supported by the browser, then it will move to apply the next font theme that you specified.",
@@ -1232,7 +1272,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "font-style", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style is used to set the text as italics, normal etc. ",
@@ -1263,7 +1303,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "margin", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style is used to apply spacing around a container (div element, images, text etc.) ",
@@ -1319,7 +1359,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "padding", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style is used to apply spacing within a container (div element, images, text etc.) ",
@@ -1375,7 +1415,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "position: fixed", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style is used to place a div container at a specific place in the web page that will stick at that same place when you scroll the web page. The container is placed reative to the browser window.",
@@ -1412,7 +1452,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "position: absolute", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style is used to place a div container at a specific place in the web page but will not stick at that same place when you scroll the web page. The container is placed relative to its ancestor element that has been positioned.",
@@ -1449,7 +1489,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "position: relative", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style is used to place a div container at a specific place in the web page that is relative to its current poisition.",
@@ -1486,7 +1526,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "position: static", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style is used as the default placement of a container. The container is placed in the order that it has been set.",
@@ -1523,7 +1563,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "position: inherit", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style inherits allows a container to inherit the property the its parent container.",
@@ -1568,7 +1608,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "position: unset", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style property removes the position property of the container that was previously set.",
@@ -1603,7 +1643,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "text align", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style sets the position of a text in a container.",
@@ -1652,7 +1692,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "float (css)", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style drags a container eithr towards the right or left of a web page.",
@@ -1696,7 +1736,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "media screen", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This is used to specify css for a specific screen width size. We can choose to use max-width or min-width depending on your intention.",
@@ -1741,7 +1781,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "border-radius", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style allow one to alter the curvature of the border edges. If the value is 0, then the border egdes become sharp corners.",
@@ -1781,7 +1821,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "border", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style allow one to alter the border properties including: thckness, color and style of an element.",
@@ -1835,7 +1875,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "display", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style describes the way an element is displayed. Some property values of display include block, flex, inline, inline-block, inline-flex, inherit, none and grid.",
@@ -1904,7 +1944,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "background-image", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style allows one to set the background image of a container",
@@ -1940,7 +1980,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "z-index", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This value from this css style determines whether an element is displayed in front or behind of another element. Elements with a higher z-index are in front of elements with a lower index.",
@@ -1994,7 +2034,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "opacity", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style has values between 0 and 1 where values close to 1 means that the element is less transparent whereas values close to 0 means that the element is more transparent.",
@@ -2034,7 +2074,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "cursor", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style allows one to set the cursor pointer. Some propery values for cursor include: pointer, progress, default, zoom-in, zoom-out, none, copy, etc.",
@@ -2113,7 +2153,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "top", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style positions the element at the top of a web page",
@@ -2151,7 +2191,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "bottom", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style positions the element at the bottom of a web page",
@@ -2189,7 +2229,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "left", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style positions the element at the left of a web page",
@@ -2227,7 +2267,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "right", 
-programming_concept_category: categories[8].category_name,
+programming_concept_category: categories[category_index.css].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This css style positions the element at the right of a web page",
@@ -2267,7 +2307,7 @@ programming_concept_example: "<code>"+
 
 
 {programming_concept_name: "typed function", 
-programming_concept_category: categories[9].category_name,
+programming_concept_category: categories[category_index.functions].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "A function that returns a value.",
@@ -2278,7 +2318,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "void function", 
-programming_concept_category: categories[9].category_name,
+programming_concept_category: categories[category_index.functions].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "A function that does not return a value.",
@@ -2289,7 +2329,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "async function", 
-programming_concept_category: categories[9].category_name,
+programming_concept_category: categories[category_index.functions].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "A function that does not return a value.",
@@ -2300,7 +2340,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "function", 
-programming_concept_category: categories[9].category_name,
+programming_concept_category: categories[category_index.functions].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "Defines a specific action that can be performed. Can have arguments passed to it in order to make it more interactive",
@@ -2311,7 +2351,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "recursive function", 
-programming_concept_category: categories[9].category_name,
+programming_concept_category: categories[category_index.functions].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This type of function calls itself continuously until it reaches a base case. The base case is the value that allows for the function to stop calling itself.",
@@ -2326,7 +2366,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "java", 
-programming_concept_category: categories[10].category_name,
+programming_concept_category: categories[category_index.programming_languages].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This ia a statically-typed; object-oriented; general purpose programming language that you can use to create mobile, desktop and web applications. Java can be run on any device that has the Java Virtual Machine (JVM). The good thing with Java is that you can write the code once and then run anywhere. ",
@@ -2335,7 +2375,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "c++", 
-programming_concept_category: categories[10].category_name,
+programming_concept_category: categories[category_index.programming_languages].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This statically-typed; general purpose programming language is an extension of the C programming language. It is a powerful language that can be used to create desktop applications, games and many more high performance applications.",
@@ -2346,7 +2386,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "c", 
-programming_concept_category: categories[10].category_name,
+programming_concept_category: categories[category_index.programming_languages].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This is a powerful, procedural and imperative programming language that was initially created to implement the UNIX Operating System. This powerful language is still very popular amongst software developers and can be used to create high performance applications.",
@@ -2357,7 +2397,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "c#", 
-programming_concept_category: categories[10].category_name,
+programming_concept_category: categories[category_index.programming_languages].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This is a statically-typed; object-oriented; general purpose programming language that can be used to create web applications; mobile applications; desktop applications and more. It is a powerful language that is used with the .NET framework.",
@@ -2368,7 +2408,7 @@ programming_concept_example: "<code>"+
 							 "</code>"
 },
 {programming_concept_name: "javascript", 
-programming_concept_category: categories[10].category_name,
+programming_concept_category: categories[category_index.programming_languages].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This is a general purpose; client side scripting language that is used to add functionality to html pages.",
@@ -2379,7 +2419,7 @@ programming_concept_example: "<code>"+
 							  "</code>"
 },
 {programming_concept_name: "php", 
-programming_concept_category: categories[10].category_name,
+programming_concept_category: categories[category_index.programming_languages].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "PHP Hypertext Preprocessor. This general purpose server-side scripting language is open source and can be used to run web applications. In order to get started with php, you will need a server in order to execute the scripts.",
@@ -2390,7 +2430,7 @@ programming_concept_example: "<code>"+
 							  "</code>"
 },
 {programming_concept_name: "python", 
-programming_concept_category: categories[10].category_name,
+programming_concept_category: categories[category_index.programming_languages].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This is a great programming language for beginners as it it very easy to learn compared to the other programming languages. This general purpose programming language can be used in the data science field as well as creating web applications and many more software applications.",
@@ -2401,7 +2441,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "r language", 
-programming_concept_category: categories[10].category_name,
+programming_concept_category: categories[category_index.programming_languages].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This programming language can be used for statistical analysis including: representation of graphs and tables, statistical calculations and many more statistical operations.",
@@ -2411,7 +2451,7 @@ programming_concept_example: "<code>"+
 							  "</code>"
 },
 {programming_concept_name: "visual basic", 
-programming_concept_category: categories[10].category_name,
+programming_concept_category: categories[category_index.programming_languages].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This is a weakly-typed; object-oriented programming language. It is good for beginners who want to learn to program as it is easy to learn.",
@@ -2423,7 +2463,7 @@ programming_concept_example: "<code>"+
 },
 
 {programming_concept_name: "class", 
-programming_concept_category: categories[11].category_name,
+programming_concept_category: categories[category_index.object_orientation].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This defines the properties of an object. If we use a house as an example, we can say the house is a class and the house has a different properties.",
@@ -2434,7 +2474,7 @@ programming_concept_example: "<code>"+
 							  "</code>"
 },
 {programming_concept_name: "object", 
-programming_concept_category: categories[11].category_name,
+programming_concept_category: categories[category_index.object_orientation].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "An object is an instance of a class. The object contains the properties as defined by the associated class.",
@@ -2447,7 +2487,7 @@ programming_concept_example: "<code>"+
 							  "</code>"
 },
 {programming_concept_name: "default constructor", 
-programming_concept_category: categories[11].category_name,
+programming_concept_category: categories[category_index.object_orientation].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This is used in the creation of an object by performing the necessary initialisations. The default constructor contains no parameters. Note that the constructor has the same name as the class name.",
@@ -2460,7 +2500,7 @@ programming_concept_example: "<code>"+
 							  "</code>"
 },
 {programming_concept_name: "parameterised constructor", 
-programming_concept_category: categories[11].category_name,
+programming_concept_category: categories[category_index.object_orientation].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This is used in the creation of an object by performing the necessary initialisations. The parameterised constructor contains parameters used for the initialisations. Note that the constructor has the same name as the class name.",
@@ -2473,7 +2513,7 @@ programming_concept_example: "<code>"+
 							  "</code>"
 },
 {programming_concept_name: "accessor", 
-programming_concept_category: categories[11].category_name,
+programming_concept_category: categories[category_index.object_orientation].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This is used to get a value from a variable that was initially set to private.",
@@ -2490,7 +2530,7 @@ programming_concept_example: "<code>"+
 							  "</code>"
 },
 {programming_concept_name: "mutator", 
-programming_concept_category: categories[11].category_name,
+programming_concept_category: categories[category_index.object_orientation].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This is used to set/change the value of a variable that was initially set to private.",
@@ -2507,7 +2547,7 @@ programming_concept_example: "<code>"+
 							  "</code>"
 },
 {programming_concept_name: "inheritance", 
-programming_concept_category: categories[11].category_name,
+programming_concept_category: categories[category_index.object_orientation].category_name,
 programming_concept_type: type.defintion,
 programming_concept_date: updated_dates.updated_date_1,
 programming_concept_definition: "This is an object orientation principle where we have a base class that represents the generic features of an object. From that, we can specialise the object by inheriting the generic features from the base class and adding specialised features to the object. For example, we can have a generic shape class that contains the dimensions of a generic shape. We can then create sub classes that inherit the base shape class feature (dimensions) and specialise the shape.",
@@ -2515,6 +2555,28 @@ programming_concept_example: "<code>"+
 							  "class specialisedClass inheritsFrom baseClass {</br></br>"+
 							  indent(2)+"<i>Note that different languages have a different word for "+wrapText("inheritsFrom",opening_double_quote,closing_double_quote) +" for how we inherit from a base class</i></br>"+
 								"}</br></br>"+
+							  "</code>"
+},
+
+{programming_concept_name: "Status code: 500", 
+programming_concept_category: categories[category_index.http_status_codes].category_name,
+programming_concept_type: type.defintion,
+programming_concept_date: updated_dates.updated_date_1,
+programming_concept_definition: "Internal Server Error. This error occurs when there is something wrong on the server side rather than the client side",
+programming_concept_example: "<code>"+
+								"<p>Status code: 500</p>"+
+							  	"<p>Internal Server Error occured</p>"+
+							  "</code>"
+},
+
+{programming_concept_name: "Status code: 500", 
+programming_concept_category: categories[category_index.http_status_codes].category_name,
+programming_concept_type: type.defintion,
+programming_concept_date: updated_dates.updated_date_1,
+programming_concept_definition: "Internal Server Error. This error occurs when there is something wrong on the server side rather than the client side",
+programming_concept_example: "<code>"+
+								"<p>Status code: 500</p>"+
+							  	"<p>Internal Server Error occured</p>"+
 							  "</code>"
 },
 

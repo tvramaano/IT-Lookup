@@ -51,7 +51,7 @@ body{
   float: left;
 }
 
-#pronounciation_settings_id,#request_a_word_id{
+#pronounciation_settings_id{
   display: none;
 }
 

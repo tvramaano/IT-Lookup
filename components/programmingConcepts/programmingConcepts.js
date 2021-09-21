@@ -50,7 +50,7 @@ function populate_programming_concepts(search_flag,sort_criteria){
                                                                     "\"<h2>Syntax/Example</h2><p>"+programming_concepts[i].programming_concept_example+"</p>\")'>"+
                                                                     "<img src = '"+image_sources.view_icon+"'/>"+
 																	"<text>View " +programming_concepts[i].programming_concept_type+ "</text>"+
-																	"</button>";
+												  "</button>";
 																	
 					programming_content_temp  += "<button onclick = 'pronunciate_definition("+
 																	"\""+programming_concepts[i].programming_concept_name+"\")'"+

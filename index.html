@@ -17,7 +17,6 @@
 	<link rel="stylesheet" href="components/footer/footer.css"/>
 	<link rel="stylesheet" href="components/footer_close/footer_close.css"/>
 	<link rel="stylesheet" href="components/pronounciation_settings/pronounciation_settings.css"/>
-	<link rel="stylesheet" href="components/request_new_word/request_new_word.css"/>
 
 	<script src="images/imageSources.js" type="text/javascript"></script>
     <script src="index.js" type="text/javascript"></script>
@@ -28,7 +27,6 @@
 	<script src="components/footer/footer.js" type="text/javascript"></script>
 	<script src="components/footer_close/footer_close.js" type="text/javascript"></script>
 	<script src="components/pronounciation_settings/pronounciation_settings.js" type="text/javascript"></script>
-	<script src="components/request_new_word/request_new_word.js" type="text/javascript"></script>
 	
 	
   
@@ -60,12 +58,6 @@
 			</script>
 		</div>
 
-		<div id = "request_a_word_id">
-			<script>
-				createRequestNewWord("request_a_word_id");
-			</script>
-		</div>
-
 		
 		
 		<div id = "home_page_id">
@@ -89,9 +81,9 @@
 					</button>
 
 					<button 
-						onclick = "show_modal(showStatus.show,page_setup_parameters[page_index.request_a_word].page_id)"
+							onclick = "generate_random_defintion()"
 					>
-							<img src = "images/alert_icon.png"/> <text>Request Word</text>
+							<img src = "images/alert_icon.png"/> <text>Random Word</text>
 					</button>
 				
 					<select onclick = "populate_programming_concepts(search_flags.search_all,document.getElementById('sort_criteria_dropdown_id').value);" id = "view_criteria">

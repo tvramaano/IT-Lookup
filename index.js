@@ -1,6 +1,6 @@
 const page_index = {
                      index_page: 0,
-                     request_a_word:1,
+                     random_definition:1,
                      pronounciation_settings_modal: 2
                    };
 
@@ -16,8 +16,8 @@ const page_setup_parameters = [
     },
   
     {
-        page_name: "Request an IT-related word that is not listed on our website",
-        page_id: "request_a_word_id"
+        page_name: "View random definition",
+        page_id: "random_definition_id"
     },
    
     {
@@ -78,11 +78,6 @@ function show_modal(showStatus_id,modal_id){
         case showStatus.show:{
             document.getElementById(modal_id).style.display = showStatus.show;
 
-            switch(modal_id){
-                case page_setup_parameters[page_index.request_a_word].page_id:{
-                    document.getElementById("body").style.overflowY = "hidden";
-                }break;
-            }
         }break;
 
         case showStatus.hide:{
@@ -95,9 +90,7 @@ function show_modal(showStatus_id,modal_id){
                     pronounciation_settings_values[settings_index.tone].value = document.getElementById("slider_voice_tone").value;
                 }break;
 
-                case page_setup_parameters[page_index.request_a_word].page_id:{
-                    document.getElementById("body").style.overflowY = "scroll";
-                }break;
+               
             }
             // if(modal_id === page_setup_parameters[page_index.pronounciation_settings_modal].page_id){
             //     pronounciation_settings_values[settings_index.volume].value = document.getElementById("slider_voice_volume").value;
@@ -107,6 +100,17 @@ function show_modal(showStatus_id,modal_id){
             
         }break;
     }
+}
+
+function generate_random_defintion(){
+    let random_index = Math.floor(Math.random() * (programming_concepts.length-1));
+    display_modal("open_status_id",
+				  "<h1>"+programming_concepts[random_index].programming_concept_name+"</h1>",
+				  "[ "+ programming_concepts[random_index].programming_concept_date+" ]",
+				  "<h2>[ "+programming_concepts[random_index].programming_concept_category+" ]</h2>",
+				  programming_concepts[random_index].programming_concept_definition,
+				  "<h2>Syntax/Example</h2><p>"+programming_concepts[random_index].programming_concept_example+"</p>"
+                  )
 }
 
 
